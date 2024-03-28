@@ -4,6 +4,18 @@
 
 @layer base {
   body {
-    background-color: bisque;
+    background-color: #F1FADA;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    @apply tracking-tighter leading-normal;
+  }
+  p, li {
+    @apply tracking-tight leading-normal;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply p-3 bg-teal-light rounded-lg text-navy;
   }
 }

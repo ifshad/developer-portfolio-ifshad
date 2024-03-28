@@ -1,8 +1,9 @@
+import SelfBanner from "@/Components/SelfBanner/page";
 
 export default function Home() {
   return (
     <div className="container">
-      coming soon....
+      <SelfBanner />
     </div>
   );
 }
