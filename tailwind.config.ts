@@ -13,6 +13,7 @@ const config: Config = {
         'teal' : '#2D9596',
         'teal-light' : '#9AD0C2',
         'sage' : '#F1FADA',
+        'grey' : '#352F44'
       }
     },
     container: {

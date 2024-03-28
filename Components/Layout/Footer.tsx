@@ -26,7 +26,7 @@ export default function Footer() {
     setLoading(true)
 
     axios
-      .post('https://api.sheetapi.rest/api/v1/sheet/qzdUq3c8fMqcse8FmhNRL', messageData)
+      .post('https://api.sheetapi.rest/api/v1/sheet/QDgKar5L2rr9ndLuTvYFL', messageData)
       .then(() => { })
       .catch((error) => setAxiosError(error))
       .finally(() => {
@@ -43,7 +43,7 @@ export default function Footer() {
       <div className='grid grid-cols-1 md:grid-cols-8 lg:grid-cols-8 p-10'>
         {/* Description */}
         <div className='col-span-5'>
-          <div className='w-3/5 mx-auto'>
+          <div className='w-5/6'>
             <h2 className='mb-3 text-xl md:text-2xl lg:text-3xl font-semibold text-base-300'>Lets Connect</h2>
             <p className='mb-6 text-base-100'>Please fill out the form on this section to contact with me or call between 9:00 A.M and 8.00 P.M ET, Monday through Friday.</p>
             <ul className='flex gap-3 items-center'>
@@ -65,7 +65,7 @@ export default function Footer() {
                   type='text'
                   name='name'
                   id='name'
-                  className='p-3 bg-transparent border border-gray-200 rounded-[.5rem] outline-none peer w-full placeholder-transparent focus:border-teal'
+                  className='text-teal p-3 bg-transparent border border-gray-200 rounded-[.5rem] outline-none peer w-full placeholder-transparent focus:border-teal'
                   placeholder='name'
                   required
                 />
@@ -81,7 +81,7 @@ export default function Footer() {
                   type='email'
                   name='email'
                   id='email'
-                  className='p-3 bg-transparent border border-gray-200 rounded-[.5rem] outline-none peer w-full placeholder-transparent focus:border-teal'
+                  className='text-teal p-3 bg-transparent border border-gray-200 rounded-[.5rem] outline-none peer w-full placeholder-transparent focus:border-teal'
                   placeholder='email'
                   required
                 />
@@ -97,7 +97,7 @@ export default function Footer() {
                   type='text'
                   name='message'
                   id='message'
-                  className='p-3 bg-transparent border border-gray-200 rounded-[.5rem] outline-none peer w-full placeholder-transparent focus:border-teal'
+                  className='text-teal p-3 bg-transparent border border-gray-200 rounded-[.5rem] outline-none peer w-full placeholder-transparent focus:border-teal'
                   placeholder='message'
                   required
                 />
@@ -126,7 +126,7 @@ export default function Footer() {
           {posted && (
             <div className='toast toast-center toast-middle'>
               <div className='alert alert-success'>
-                <span>Request Successful!</span>
+                <span>Message sent!</span>
               </div>
             </div>
           )}
