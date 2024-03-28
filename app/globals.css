@@ -16,6 +16,9 @@
 
 @layer components {
   .btn {
-    @apply p-3 bg-teal-light rounded-lg text-navy;
+    @apply p-3 bg-teal-light rounded-lg text-navy border-teal-light hover:bg-teal hover:border-teal hover:text-sage;
+  }
+  .card {
+    @apply p-7 bg-white shadow-xl rounded-lg;
   }
 }
