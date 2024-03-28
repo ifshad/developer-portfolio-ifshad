@@ -22,11 +22,11 @@ const config: Config = {
         'md': '768px',
         'lg': '1024px',
         'xl': '1280px',
-        '2xl': '1536px',
-        '3xl' : '1600px',
+        // '2xl': '1536px',
+        // '3xl' : '1600px',
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
 export default config;
