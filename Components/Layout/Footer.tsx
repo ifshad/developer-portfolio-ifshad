@@ -40,11 +40,11 @@ export default function Footer() {
   }
   return (
     <div className='container border-t-2'>
-      <div className='grid grid-cols-8 p-10'>
+      <div className='grid grid-cols-1 md:grid-cols-8 lg:grid-cols-8 p-10'>
         {/* Description */}
         <div className='col-span-5'>
           <div className='w-3/5 mx-auto'>
-            <h2 className='mb-3 text-3xl font-semibold text-base-300'>Lets Connect</h2>
+            <h2 className='mb-3 text-xl md:text-2xl lg:text-3xl font-semibold text-base-300'>Lets Connect</h2>
             <p className='mb-6 text-base-100'>Please fill out the form on this section to contact with me or call between 9:00 A.M and 8.00 P.M ET, Monday through Friday.</p>
             <ul className='flex gap-3 items-center'>
               <li className='text-base-100 hover:text-navy'><Link href="https://www.facebook.com/ifshadhasan.sharan"><BiLogoFacebookSquare size={30} /></Link></li>
@@ -56,7 +56,7 @@ export default function Footer() {
         {/* Form */}
         <div className='col-span-3'>
           <div className=''>
-            <div className='text-2xl text-teal font-semibold mb-8'>
+            <div className='text-xl md:text-2xl lg:text-3xl text-teal font-semibold mb-8'>
               Lets message me!
             </div>
             <form onSubmit={handleSubmit} className='flex flex-col gap-y-5'>
