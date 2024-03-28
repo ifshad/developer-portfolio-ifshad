@@ -8,7 +8,7 @@ import { MdCall } from "react-icons/md";
 
 export default function SelfBanner() {
   return (
-    <div className="container flex justify-between items-center py-10">
+    <div className="container flex justify-between items-center py-10 lg:h-[650px]">
       <div className="">
         <h1 className="text-6xl text-teal font-bold mb-5">
           Hi, I&apos;m <br />{" "}
