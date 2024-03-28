@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import ifshad from "@/public/images/Ifshad_01.png";
+import ifshad from "@/public/Images/Ifshad_01.png";
 import Link from "next/link";
 import { FaDownload } from "react-icons/fa6";
 import { MdCall } from "react-icons/md";
