@@ -19,6 +19,27 @@
     @apply p-3 bg-teal-light rounded-lg text-navy border-teal-light hover:bg-teal hover:border-teal hover:text-sage;
   }
   .card {
-    @apply p-7 bg-white shadow-xl rounded-lg;
+    @apply p-7 bg-white shadow-xl rounded-lg hover:shadow-md hover:bg-teal text-grey hover:text-white grid grid-cols-12 items-center gap-2;
+  }
+
+  .card-title {
+    @apply col-span-4 text-xl md:text-2xl lg:text-3xl font-semibold transition-transform translate-x-0 translate-y-0;
+  }
+
+  .card:hover .card-title {
+    @apply translate-x-3 transition-all duration-300;
+  }
+
+  .card-img {
+    @apply object-cover col-span-2;
+    transform-origin: center center;
+  }
+
+  .card:hover .card-img {
+    @apply scale-150;
+  }
+
+  .card-content {
+    @apply col-span-6 text-sm md:text-base lg:text-lg text-start;
   }
 }
