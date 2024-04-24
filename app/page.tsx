@@ -27,26 +27,34 @@ export default function Home() {
             <h2 className="text-2xl md:text-3xl lg:text-4xl text-grey font-semibold mb-3 text-center">What I Do</h2>
             <p className=" text-grey mb-5 md:text-center lg:text-center">I have more than 10 years experience building software for clients all over the world. Below is a quick overview of my main technical skill sets and technologies i use. Want to find out more about my experience? Check out my online resume and project portfolio.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10">
+          <div className="flex flex-col gap-2">
             <div className="card">
-              <SiJavascript className="text-5xl text-teal" />
-              <h3 className="text-xl md:text-2xl lg:text-3xl text-grey font-semibold">Frontend Development</h3>
-              <p className="text-grey">I specialize in creating responsive, user-friendly websites and applications using modern technologies like React, Next.js, and TailwindCSS.</p>
+              <figure className="card-img text-5xl" >
+                <SiJavascript />
+              </figure>
+              <h3 className="card-title">Frontend Development</h3>
+              <p className="card-content">I specialize in creating responsive, user-friendly websites and applications using modern technologies like React, Next.js, and TailwindCSS.</p>
             </div>
             <div className="card">
-              <SiReact className="text-5xl text-teal" />
-              <h3 className="text-xl md:text-2xl lg:text-3xl text-grey font-semibold">Backend Development</h3>
-              <p className="text-grey">I have experience building backend systems with Node.js, Express, and MongoDB. I can create RESTful APIs and integrate third-party services.</p>
+              <figure className="card-img text-5xl">
+                <SiReact />
+              </figure>
+              <h3 className="card-title">Backend Development</h3>
+              <p className="card-content">I have experience building backend systems with Node.js, Express, and MongoDB. I can create RESTful APIs and integrate third-party services.</p>
             </div>
             <div className="card">
-              <FaNode className="text-5xl text-teal" />
-              <h3 className="text-xl md:text-2xl lg:text-3xl text-grey font-semibold">Machine Learning</h3>
-              <p className="text-grey">I have worked on machine learning projects using Python, TensorFlow, and scikit-learn. I can build and deploy models for various applications.</p>
+              <figure className="card-img text-5xl">
+                <FaNode />
+              </figure>
+              <h3 className="card-title">Machine Learning</h3>
+              <p className="card-content">I have worked on machine learning projects using Python, TensorFlow, and scikit-learn. I can build and deploy models for various applications.</p>
             </div>
             <div className="card">
-              <SiMongodb className="text-5xl text-teal" />
-              <h3 className="text-xl md:text-2xl lg:text-3xl text-grey font-semibold">Machine Learning</h3>
-              <p className="text-grey">I have worked on machine learning projects using Python, TensorFlow, and scikit-learn. I can build and deploy models for various applications.</p>
+              <figure className="card-img text-5xl">
+                <SiMongodb />
+              </figure>
+              <h3 className="card-title">Machine Learning</h3>
+              <p className="card-content">I have worked on machine learning projects using Python, TensorFlow, and scikit-learn. I can build and deploy models for various applications.</p>
             </div>
           </div>
         </div>
