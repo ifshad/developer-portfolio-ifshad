@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="container flex w-full h-screen overflow-y-hidden">
-          <div className="w-1/4 ">
+          <div className="w-1/4">
             <LeftPanel />
           </div>
           <div className="w-3/4 overflow-y-scroll">
