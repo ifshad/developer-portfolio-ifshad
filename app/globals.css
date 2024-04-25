@@ -19,11 +19,11 @@
     @apply p-3 bg-teal-light rounded-lg text-navy border-teal-light hover:bg-teal hover:border-teal hover:text-sage;
   }
   .card {
-    @apply p-7 bg-white shadow-xl rounded-lg hover:shadow-md hover:bg-teal text-grey hover:text-white md:grid md:grid-cols-12 items-center gap-2;
+    @apply p-7 bg-white hover:shadow-2xl rounded-lg hover:bg-teal text-grey hover:text-white md:grid md:grid-cols-12 items-center gap-2;
   }
 
   .card-title {
-    @apply md:col-span-4 text-xl md:text-2xl lg:text-3xl font-semibold transition-transform translate-x-0 translate-y-0;
+    @apply md:col-span-8 text-lg md:text-xl lg:text-2xl font-semibold transition-transform translate-x-0 translate-y-0;
   }
 
   .card:hover .card-title {
@@ -31,7 +31,7 @@
   }
 
   .card-img {
-    @apply object-cover md:col-span-2;
+    @apply object-cover md:col-span-1;
     transform-origin: center center;
   }
 
@@ -40,6 +40,6 @@
   }
 
   .card-content {
-    @apply md:col-span-6 text-sm md:text-base lg:text-lg text-start;
+    @apply md:col-span-3 text-sm md:text-base text-start;
   }
 }
