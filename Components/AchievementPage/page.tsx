@@ -11,7 +11,7 @@ export default function AchievementPage() {
                     <BiSolidBadge />
                 </figure>
                 <p className='col-span-1'>2023</p>
-                <h2 className='font-semi text-lg col-span-3'>IoT Training</h2>
+                <h2 className='font-semibold text-lg col-span-3'>IoT Training</h2>
                 <p className='text-base font-medium col-span-6'>Bangabandhu Sheikh Mujib Hi-Tech Park</p>
                 <div className='col-span-1 text-end'>
                     <p>Bangladesh</p>
@@ -22,7 +22,7 @@ export default function AchievementPage() {
                     <BiSolidBadge />
                 </figure>
                 <p className='col-span-1'>2022</p>
-                <h2 className='font-semi text-lg col-span-3'>Industrial Attachment</h2>
+                <h2 className='font-semibold text-lg col-span-3'>Industrial Attachment</h2>
                 <p className='text-base font-medium col-span-6'>Bangladesh Industrial Assistance Technical Centre BITAC</p>
                 <div className='col-span-1 text-end'>
                     <p>Bangladesh</p>
