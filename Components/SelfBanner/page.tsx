@@ -9,7 +9,7 @@ import { MdCall } from "react-icons/md";
 export default function SelfBanner() {
   return (
     <div className="container mt-10 w-full flex justify-center">
-      <div className="flex flex-col w-3/5">
+      <div className="flex flex-col w-5/6">
         <h1 className="text-3xl md:text-5xl text-navy font-bold mb-5 text-center">
           Ifshad Hasan Sharan
         </h1>
