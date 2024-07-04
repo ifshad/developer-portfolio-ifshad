@@ -12,7 +12,7 @@ export default function LeftPanel() {
             <div className='h-screen flex flex-col justify-around'>
                 <div className='flex flex-col items-center'>
                     <h1 className="text-xl md:text-2xl lg:text-3xl text-white font-bold mb-5 text-center">Ifshad Hasan Sharan</h1>
-                    <Image src={ifshad} alt="Ifshad Hasan Sharan" width={200} height={200} className='border-4 border-white rounded-full px-4' />
+                    <Image src={ifshad} alt="Ifshad Hasan Sharan" width={200} height={200} className='border-4 border-orange-500 rounded-full px-4 bg-gradient-to-r from-orange-500 to-yellow-300 shadow-md' />
                     <p className='text-white text-center'>&quot;Success is not final, failure is not fatal: It is the courage to continue that counts.&quot; - Winston Churchill</p>
                 </div>
                 <ul className='flex gap-3 justify-center items-center'>

@@ -6,7 +6,7 @@ import { BiBuildingHouse } from 'react-icons/bi'
 
 export default function ProfessionalExpPage() {
   return (
-    <div className='flex flex-col gap-2 m-4'>
+    <div className='container flex flex-col gap-2 m-4'>
       <h1 className='flex items-center text-xl md:text-2xl lg:text-3xl font-bold text-teal gap-2'><span><BiBuildingHouse /></span>Professional Experiences</h1>
       <div className='card md:ml-9'>
         <Image src={humufy} alt='RUET logo' width={60} className='card-img'/>
