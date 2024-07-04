@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import LeftPanel from "@/Components/LeftPanel/page";
+import LeftPanel from "@/components/LeftPanel/page";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,10 +19,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div className="container flex w-full h-screen overflow-y-hidden">
-          <div className="w-1/4">
+          <div className="md:w-1/4 hidden md:flex">
             <LeftPanel />
           </div>
-          <div className="w-3/4 overflow-y-scroll">
+          <div className="md:w-3/4 overflow-y-scroll">
             {children}
           </div>
         </div>
