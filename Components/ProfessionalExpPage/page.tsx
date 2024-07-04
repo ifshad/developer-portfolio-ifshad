@@ -16,7 +16,7 @@ export default function ProfessionalExpPage() {
         </div>
         <div className='card-content'>
             <p className='flex items-center gap-2'><span><FaLocationPin /></span> Dhaka, Bangladesh</p>
-            <p className='flex items-center gap-2'><span><FaClock /></span> March 2024- Present</p>
+            <p className='flex items-center gap-2'><span><FaClock /></span> March 2024- June 2024</p>
         </div>
       </div>
     </div>
