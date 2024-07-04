@@ -11,7 +11,7 @@ export default function SelfBanner() {
   return (
     <div className="container flex md:h-[550px] w-full items-center justify-around">
       <div className="w-3/6">
-        <p className="text-lg md:text-3xl">Hi! I'm,</p>
+        <p className="text-lg md:text-3xl font-bold">Hi! I'm,</p>
         <h1 className="text-3xl md:text-5xl text-navy font-extrabold ">
           Ifshad Hasan Sharan
         </h1>
@@ -31,10 +31,10 @@ export default function SelfBanner() {
           ]}
           wrapper="span"
           speed={50}
-          style={{ fontSize: "2em", display: "inline-block" }}
+          style={{ fontSize: "2em", display: "inline-block", fontWeight: "bold" }}
           repeat={Infinity}
         />
-        <div className="mt-10 flex justify-center items-center gap-5">
+        {/* <div className="mt-10 flex justify-center items-center gap-5">
           <Link
             href="/contact"
             className="text-grey hover:text-navy flex items-center border-2 border-teal rounded-lg p-3 gap-2"
@@ -46,7 +46,7 @@ export default function SelfBanner() {
             <FaDownload />
             <span>Download CV</span>
           </button>
-        </div>
+        </div> */}
       </div>
       <div className="border-4 border-orange-500 rounded-full">
         <div className="w-96 h-96 m-2 border-2 rounded-full relative bg-gradient-to-r from-orange-500 to-yellow-300 overflow-clip">

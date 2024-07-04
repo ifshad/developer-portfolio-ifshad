@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import {  Lato, Ubuntu } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Layout/Header";
+import Footer from "@/components/Layout/Footer";
 
 const ubuntu = Ubuntu({weight: ['300', '400', '500', '700'], subsets: ['latin']});
 const lato = Lato({weight: ['100', '300', '400', '700', '900'], subsets: ['latin']})
@@ -22,6 +23,7 @@ export default function RootLayout({
         <div className="">
           <Header />
           {children}
+          <Footer />
         </div>
       </body>
     </html>
