@@ -9,7 +9,7 @@ import VolunteerPage from "@/components/VolunteerPage/page";
 
 export default function AboutPage() {
   return (
-    <div className="container">
+    <div className="container md:p-16">
       <ProfessionalExpPage />
       <ExpertisePage />
       <EducationPage />

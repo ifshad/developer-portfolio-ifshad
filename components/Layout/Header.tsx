@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { FaDownload } from "react-icons/fa6";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
   return (
@@ -11,17 +12,12 @@ export default function Header() {
         </Link>
       </div>
       <div className="">
-        <ul className="flex md:space-x-6">
-          <li className="hover:text-teal">
-            <Link href="/">Home</Link>
-          </li>
-          <li className="hover:text-teal">
-            <Link href="/about">About Me</Link>
-          </li>
-          <li className="hover:text-teal">
-            <Link href="/contact">Contact</Link>
-          </li>
-        </ul>
+        <Button asChild variant="link" className="text-lg">
+          <Link href="/about">About</Link>
+        </Button>
+        <Button asChild variant="link" className="text-lg">
+          <Link href="/contact">Contact</Link>
+        </Button>
       </div>
       <div>
         <button className="btn flex items-center gap-2">
