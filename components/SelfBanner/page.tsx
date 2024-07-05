@@ -13,14 +13,17 @@ import { SiLeetcode } from "react-icons/si";
 export default function SelfBanner() {
   return (
     <div className="container flex md:h-[550px] w-full">
+      {/* Image intro */}
       <div className="w-1/2 h-full p-5 md:p-12 flex flex-col justify-around">
         <div>Logo</div>
+        {/* Name */}
         <div>
           <h1 className="text-4xl md:text-7xl font-extrabold ">
             Ifshad <br /> Hasan Sharan
           </h1>
           <div className="w-16 border-b-4 border-b-accent-color mt-5"></div>
         </div>
+        {/* Social Links */}
         <div>
           <ul className="flex gap-3 items-center">
             <li className="text-base-100 opacity-70 hover:opacity-100">
@@ -58,7 +61,9 @@ export default function SelfBanner() {
           className="absolute -z-50 translate-x-72 translate-y-8"
         />
       </div>
+      {/* Description */}
       <div className="w-1/2 p-5 md:p-12 flex flex-col justify-around">
+        {/* Navigation menu */}
         <div>
           <Button asChild variant="link" className="text-lg text-primary-color">
             <Link href="/about">About</Link>
@@ -67,6 +72,7 @@ export default function SelfBanner() {
             <Link href="/contact">Contact</Link>
           </Button>
         </div>
+        {/* Description Section */}
         <div>
           <p className="text-lg mb-5 md:text-xl opacity-80">Introduction</p>
           <TypeAnimation

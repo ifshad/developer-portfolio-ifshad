@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import ShowcaseBanner from "@/components/ShowcaseBanner/page";
 // import ScrollAnimation from "react-animate-on-scroll";
 
 const projects = [
@@ -32,6 +33,7 @@ export default function Home() {
   return (
     <div className="container">
       <SelfBanner />
+      <ShowcaseBanner />
       {/* Projects */}
       <div className="p-4">
         <h1 className="text-3xl md:text-5xl font-bold text-center">Projects</h1>
