@@ -1,9 +1,32 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import { FaArrowRight } from "react-icons/fa6";
-import { TypeAnimation } from "react-type-animation";
-
+import { FaArrowRight, FaGithub } from "react-icons/fa6";
+import { Button } from "../ui/button";
+import { FaExternalLinkAlt } from "react-icons/fa";
+const projects = [
+  {
+    title: "TechDynasty- Modern tech on your fingertip!",
+    imageUrl: "habijabi",
+    description: "habijabi",
+    liveLink: "ditasi",
+    repoLink: "wait",
+  },
+  {
+    title: "The Tensor Times!",
+    imageUrl: "habijabi",
+    description: "habijabi",
+    liveLink: "ditasi",
+    repoLink: "wait",
+  },
+  {
+    title: "Personal portfolio!",
+    imageUrl: "habijabi",
+    description: "habijabi",
+    liveLink: "ditasi",
+    repoLink: "wait",
+  },
+];
 export default function ShowcaseBanner() {
   return (
     <div className="container">
@@ -33,20 +56,58 @@ export default function ShowcaseBanner() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h2>
           <p className="text-lg my-5 md:text-xl opacity-80">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit doloribus consequatur, repudiandae quia sapiente qui. Voluptas natus rerum, debitis corrupti laudantium, repudiandae quos consequuntur, cumque nostrum fuga animi. Incidunt, aliquid.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Sit doloribus
+            consequatur, repudiandae quia sapiente qui. Voluptas natus rerum,
+            debitis corrupti laudantium, repudiandae quos consequuntur, cumque
+            nostrum fuga animi. Incidunt, aliquid.
           </p>
-          <div className="">
-            <Link
-              href="/about"
-              className="inline-flex text-accent-color opacity-80 items-center gap-x-2 border-b-2 border-transparent hover:opacity-100 hover:border-accent-color"
-            >
-              My Story <FaArrowRight />
-            </Link>
+          {/* Experience section */}
+          <div className="flex w-3/4 justify-between">
+            <div className="flex items-center gap-3">
+              <span className="text-accent-color text-5xl">1</span>
+              <p>
+                Years of <br /> Experience
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="text-accent-color text-5xl">2</span>
+              <p>
+                Satisfied <br /> Client
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      {/* Cards */}
-      <div></div>
+      {/* Projects */}
+      <div className="grid grid-cols-3 gap-4 p-5 w-3/4 mx-auto">
+        {projects.map((project, i) => (
+          <div
+            key={i}
+            className="w-80 h-80 bg-tertiary-color/70 hover:shadow-md hover:shadow-accent-color p-8 rounded-sm grid grid-rows-6 hover:bg-accent-color"
+          >
+            <div className="row-span-3"></div>
+            <div className="row-span-2">
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+            </div>
+            <div className="row-span-1 space-x-6">
+              <Link
+                href={project.liveLink}
+                className="inline-flex opacity-80 items-center gap-x-2 border-b-2 border-transparent hover:opacity-100 hover:border-primary-color"
+              >
+                Live Link <FaExternalLinkAlt />
+              </Link>
+              <Link
+                href={project.repoLink}
+                className="inline-flex opacity-80 items-center gap-x-2 border-b-2 border-transparent hover:opacity-100 hover:border-primary-color"
+              >
+                GitHub <FaGithub />
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
