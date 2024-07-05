@@ -1,62 +1,105 @@
 "use client";
 import React from "react";
-import Link from "next/link";
-import { FaDownload } from "react-icons/fa6";
-import { MdCall } from "react-icons/md";
 import { TypeAnimation } from "react-type-animation";
 import Image from "next/image";
 import ifshad from "@/public/Images/Ifshad_01.png";
+import { Button } from "../ui/button";
+import Link from "next/link";
+import { FaArrowRight } from "react-icons/fa6";
+import { BiLogoFacebookSquare, BiLogoLinkedinSquare } from "react-icons/bi";
+import { FaDiscord, FaGithub } from "react-icons/fa6";
+import { SiLeetcode } from "react-icons/si";
 
 export default function SelfBanner() {
   return (
-    <div className="container flex md:h-[550px] w-full items-center justify-around">
-      <div className="w-3/6">
-        <p className="text-lg md:text-3xl font-bold">Hi! I'm,</p>
-        <h1 className="text-3xl md:text-5xl text-navy font-extrabold ">
-          Ifshad Hasan Sharan
-        </h1>
-        <TypeAnimation
-          sequence={[
-            // Same substring at the start will only be typed out once, initially
-            "I am a software engineer",
-            1000, // wait 1s before replacing "Mice" with "Hamsters"
-            "I adept in both front-end and back-end technologies",
-            1000,
-            "I adept in data structures and algorithms",
-            1000,
-            "I create robust web applications",
-            1000,
-            "I thrive in collaborative environment",
-            1000,
-          ]}
-          wrapper="span"
-          speed={50}
-          style={{ fontSize: "2em", display: "inline-block", fontWeight: "bold" }}
-          repeat={Infinity}
+    <div className="container flex md:h-[550px] w-full">
+      <div className="w-1/2 h-full p-5 md:p-12 flex flex-col justify-around">
+        <div>Logo</div>
+        <div>
+          <h1 className="text-4xl md:text-7xl font-extrabold ">
+            Ifshad <br /> Hasan Sharan
+          </h1>
+          <div className="w-16 border-b-4 border-b-accent-color mt-5"></div>
+        </div>
+        <div>
+          <ul className="flex gap-3 items-center">
+            <li className="text-base-100 opacity-70 hover:opacity-100">
+              <Link href="https://www.facebook.com/ifshadhasan.sharan">
+                <BiLogoFacebookSquare size={30} />
+              </Link>
+            </li>
+            <li className="text-base-100 opacity-70 hover:opacity-100">
+              <Link href="https://www.linkedin.com/in/ifshad-hasan-sharan-50a6b1178/">
+                <BiLogoLinkedinSquare size={30} />
+              </Link>
+            </li>
+            <li className="text-base-100 opacity-70 hover:opacity-100">
+              <Link href="https://discordapp.com/users/ifshad_51">
+                <FaDiscord size={25} />
+              </Link>
+            </li>
+            <li className="text-base-100 opacity-70 hover:opacity-100">
+              <Link href="https://github.com/ifshad">
+                <FaGithub size={25} />
+              </Link>
+            </li>
+            <li className="text-base-100 opacity-70 hover:opacity-100">
+              <Link href="https://leetcode.com/u/i6J0GjFUV9/">
+                <SiLeetcode size={25} />
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <Image
+          src={ifshad}
+          alt="Ifshad Hasan Sharan"
+          width={360}
+          height={360}
+          className="absolute -z-50 translate-x-72 translate-y-8"
         />
-        {/* <div className="mt-10 flex justify-center items-center gap-5">
-          <Link
-            href="/contact"
-            className="text-grey hover:text-navy flex items-center border-2 border-teal rounded-lg p-3 gap-2"
-          >
-            <MdCall />
-            <span>Contact Me</span>
-          </Link>
-          <button className="btn flex items-center gap-2">
-            <FaDownload />
-            <span>Download CV</span>
-          </button>
-        </div> */}
       </div>
-      <div className="border-4 border-orange-500 rounded-full">
-        <div className="w-96 h-96 m-2 border-2 rounded-full relative bg-gradient-to-r from-orange-500 to-yellow-300 overflow-clip">
-          <Image
-            src={ifshad}
-            alt="Ifshad Hasan Sharan"
-            width={360}
-            height={360}
-            className="inset-0 absolute"
+      <div className="w-1/2 p-5 md:p-12 flex flex-col justify-around">
+        <div>
+          <Button asChild variant="link" className="text-lg text-primary-color">
+            <Link href="/about">About</Link>
+          </Button>
+          <Button asChild variant="link" className="text-lg text-primary-color">
+            <Link href="/contact">Contact</Link>
+          </Button>
+        </div>
+        <div>
+          <p className="text-lg mb-5 md:text-xl opacity-80">Introduction</p>
+          <TypeAnimation
+            sequence={[
+              // Same substring at the start will only be typed out once, initially
+              "I am a Full Stack Developer",
+              1000, // wait 1s before replacing "Mice" with "Hamsters"
+              "I am a Designer",
+              1000,
+            ]}
+            wrapper="span"
+            speed={50}
+            style={{
+              display: "inline-block",
+            }}
+            repeat={Infinity}
+            className="text-lg md:text-5xl font-bold"
           />
+          {/* <h2 className="text-lg md:text-5xl font-bold">,based in Dhaka Bangladesh</h2> */}
+          <p className="text-lg my-5 md:text-xl opacity-80">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+            voluptates dolore dolor eum praesentium iure suscipit quod. Quasi
+            modi, debitis amet non rem beatae maiores impedit, aut, dicta libero
+            reprehenderit!
+          </p>
+          <div className="">
+            <Link
+              href="/about"
+              className="inline-flex text-accent-color opacity-80 items-center gap-x-2 border-b-2 border-transparent hover:opacity-100 hover:border-accent-color"
+            >
+              My Story <FaArrowRight />
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    /* --background: #373A40; */
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -71,17 +71,16 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-    background-color: #F1FADA;
+    @apply bg-tertiary-color text-primary-color;
   }
 }
 
 @layer components {
   .btn {
-    @apply p-3 bg-teal-light rounded-lg text-navy border-teal-light hover:bg-teal hover:border-teal hover:text-sage;
+    @apply p-3 rounded-lg ;
   }
   .card {
-    @apply p-4 bg-white hover:transition-all hover:shadow-2xl rounded-lg hover:bg-teal text-grey hover:text-white md:grid md:grid-cols-12 items-center gap-2 text-sm text-start;
+    @apply p-4 hover:transition-all hover:shadow-2xl rounded-lg md:grid md:grid-cols-12 items-center gap-2 text-sm text-start;
   }
 
   .card-title {

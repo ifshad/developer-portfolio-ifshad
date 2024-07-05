@@ -12,10 +12,10 @@ export default function Header() {
         </Link>
       </div>
       <div className="">
-        <Button asChild variant="link" className="text-lg">
+        <Button asChild variant="link" className="text-lg text-primary-color">
           <Link href="/about">About</Link>
         </Button>
-        <Button asChild variant="link" className="text-lg">
+        <Button asChild variant="link" className="text-lg text-primary-color">
           <Link href="/contact">Contact</Link>
         </Button>
       </div>

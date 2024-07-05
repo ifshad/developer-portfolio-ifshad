@@ -29,7 +29,7 @@ export default function RootLayout({
       <body className={lato.className}>
         <div className="">
           <NextTopLoader />
-          <Header />
+          {/* <Header /> */}
           {children}
           <Footer />
         </div>
