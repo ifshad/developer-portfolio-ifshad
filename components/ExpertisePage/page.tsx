@@ -148,7 +148,7 @@ const others = [
 
 export default function ExpertisePage() {
   return (
-    <div className="m-5">
+    <div className="container m-5">
       <h1 className="flex items-center text-xl md:text-2xl lg:text-3xl font-bold text-teal gap-2">
         <span>
           <BsLightning />

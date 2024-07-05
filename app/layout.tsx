@@ -1,10 +1,18 @@
 import type { Metadata } from "next";
-import {  Lato, Ubuntu } from "next/font/google";
+import { Lato, Ubuntu } from "next/font/google";
 import "./globals.css";
-import LeftPanel from "@/components/LeftPanel/page";
+import Header from "@/components/Layout/Header";
+import Footer from "@/components/Layout/Footer";
+import NextTopLoader from "nextjs-toploader";
 
-const ubuntu = Ubuntu({ weight: ['300', '400', '500', '700'], display: "swap", subsets: ['latin']});
-const lato = Lato({weight: ['100', '300', '400', '700', '900'], subsets: ['latin']})
+const ubuntu = Ubuntu({
+  weight: ["300", "400", "500", "700"],
+  subsets: ["latin"],
+});
+const lato = Lato({
+  weight: ["100", "300", "400", "700", "900"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Ifshad-Dev",
@@ -19,11 +27,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={lato.className}>
-        <div className="container flex w-full h-screen overflow-y-hidden">
-          <div className="md:w-1/4 hidden md:flex">
-            <LeftPanel />
-          </div>
-          <div className="md:w-3/4 overflow-y-scroll">{children}</div>
+        <div className="">
+          <NextTopLoader />
+          {/* <Header /> */}
+          {children}
+          <Footer />
         </div>
       </body>
     </html>

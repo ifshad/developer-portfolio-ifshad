@@ -1,26 +1,29 @@
 import Link from "next/link";
 import React from "react";
+import { FaDownload } from "react-icons/fa6";
+import { Button } from "@/components/ui/button";
 
 export default function Header() {
   return (
-    <div className="container">
-      <div className="navbar">
-        <div className="navbar-start">
-          <Link href="/" className="btn btn-ghost text-xl">Ifshad</Link>
-        </div>
-        <div className="navbar-end">
-          <ul className="menu menu-horizontal text-base-100 font-medium text-base px-1">
-            <li className="hover:text-teal">
-              <Link href="/">Home</Link>
-            </li>
-            <li className="hover:text-teal">
-              <Link href="/about">About Me</Link>
-            </li>
-            <li className="hover:text-teal">
-              <Link href="/contact">Contact</Link>
-            </li>
-          </ul>
-        </div>
+    <div className="flex justify-between md:h-20 items-center md:px-20 shadow-lg sticky top-0 z-50 backdrop-blur-md">
+      <div className="">
+        <Link href="/" className="">
+          Ifshad
+        </Link>
+      </div>
+      <div className="">
+        <Button asChild variant="link" className="text-lg text-primary-color">
+          <Link href="/about">About</Link>
+        </Button>
+        <Button asChild variant="link" className="text-lg text-primary-color">
+          <Link href="/projects">Works</Link>
+        </Button>
+      </div>
+      <div>
+        <button className="btn flex items-center gap-2">
+          <FaDownload />
+          <span>Download CV</span>
+        </button>
       </div>
     </div>
   );

@@ -1,137 +1,153 @@
-"use client"
-import React from 'react'
-import axios from 'axios'
-import { useEffect, useState } from 'react'
-import { FaDiscord, FaFacebook, FaLinkedinIn, FaTwitter } from 'react-icons/fa6'
-import Link from 'next/link'
-import { BiLogoFacebookSquare, BiLogoLinkedinSquare } from 'react-icons/bi'
+"use client";
+import React, { useState } from "react";
+import { FaArrowRight, FaDiscord } from "react-icons/fa6";
+import Link from "next/link";
+import axios from "axios";
+import { Button } from "../ui/button";
 
 export default function Footer() {
-  const [loading, setLoading] = useState(false)
-  const [axiosError, setAxiosError] = useState<any>()
-  const [posted, setPosted] = useState(false)
+  const [loading, setLoading] = useState(false);
+  const [axiosError, setAxiosError] = useState<any>();
+  const [posted, setPosted] = useState(false);
 
   const handleSubmit = (e: any) => {
-    e.preventDefault()
-    const form = new FormData(e.currentTarget)
-    const name = form.get('name')
-    const email = form.get('email')
-    const message = form.get('message')
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const name = form.get("name");
+    const email = form.get("email");
+    const message = form.get("message");
 
     const messageData = {
       Name: name,
       Email: email,
       Message: message,
-    }
-    setLoading(true)
+    };
+    setLoading(true);
 
     axios
-      .post('https://api.sheetapi.rest/api/v1/sheet/QDgKar5L2rr9ndLuTvYFL', messageData)
-      .then(() => { })
+      .post(
+        "https://api.sheetapi.rest/api/v1/sheet/QDgKar5L2rr9ndLuTvYFL",
+        messageData
+      )
+      .then(() => {})
       .catch((error) => setAxiosError(error))
       .finally(() => {
-        setLoading(false)
-        setPosted(true)
-      })
+        setLoading(false);
+        setPosted(true);
+      });
     setTimeout(() => {
-      setPosted(false)
-    }, 3000)
-    e.target.reset()
-  }
+      setPosted(false);
+    }, 3000);
+    e.target.reset();
+  };
   return (
-    <div className='container border-t-2'>
-      <div className='grid grid-cols-1 md:grid-cols-8 lg:grid-cols-8 p-10'>
+    <div className="container py-6 md:py-14 bg-tertiary-color">
+      <div className="flex justify-between p-10">
         {/* Description */}
-        <div className='col-span-5'>
-          <div className='w-5/6'>
-            <h2 className='mb-3 text-xl md:text-2xl lg:text-3xl font-semibold text-base-300'>Lets Connect</h2>
-            <p className='mb-6 text-base-100'>Please fill out the form on this section to contact with me or call between 9:00 A.M and 8.00 P.M ET, Monday through Friday.</p>
-            <ul className='flex gap-3 items-center'>
-              <li className='text-base-100 hover:text-navy'><Link href="https://www.facebook.com/ifshadhasan.sharan"><BiLogoFacebookSquare size={30} /></Link></li>
-              <li className='text-base-100 hover:text-navy'><Link href="https://www.linkedin.com/in/ifshad-hasan-sharan-50a6b1178/"><BiLogoLinkedinSquare size={30} /></Link></li>
-              <li className='text-base-100 hover:text-navy'><Link href="/"><FaDiscord size={25} /></Link></li>
-            </ul>
+        <div className="mb-5">
+          <div className="p-5 md:p-12 flex flex-col justify-around">
+            <h2 className="text-lg md:text-3xl font-bold">
+              Got a Project? <br /> Lets Talk
+            </h2>
+            <p className="text-lg my-5 md:text-xl opacity-80">
+              I used to help others with my genius solutions.
+            </p>
+            <div className="">
+              <Link
+                href="/about"
+                className="inline-flex text-accent-color opacity-90 items-center gap-x-2 border-b-2 border-transparent hover:opacity-100 hover:border-accent-color"
+              >
+                Email Me <FaArrowRight />
+              </Link>
+            </div>
           </div>
         </div>
         {/* Form */}
-        <div className='col-span-3'>
-          <div className=''>
-            <div className='text-xl md:text-2xl lg:text-3xl text-teal font-semibold mb-8'>
-              Lets message me!
-            </div>
-            <form onSubmit={handleSubmit} className='flex flex-col gap-y-5'>
-              <div className='relative'>
+        <div className="col-span-3">
+          <div className="">
+            <h2 className="text-lg md:text-3xl font-bold mb-5">
+              Estimate Your Project? <br /> Let Me Know Here
+            </h2>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-y-5">
+              <div className="relative">
                 <input
-                  type='text'
-                  name='name'
-                  id='name'
-                  className='text-teal p-3 bg-transparent border border-gray-200 rounded-[.5rem] outline-none peer w-full placeholder-transparent focus:border-teal'
-                  placeholder='name'
+                  type="text"
+                  name="name"
+                  id="name"
+                  className=" p-3 bg-transparent border border-gray-200 rounded-[.5rem] outline-none peer w-full placeholder-transparent"
+                  placeholder="name"
                   required
                 />
                 <label
-                  htmlFor='name'
-                  className='absolute left-3 -top-3 cursor-text bg-sage px-1 text-base lg:peer-focus:text-base md:peer-focus:text-base peer-focus:text-sm peer-placeholder-shown:text-teal peer-placeholder-shown:translate-y-6 peer-placeholder-shown:font-medium  peer-focus:-translate-y-0  transition-all duration-200'
+                  htmlFor="name"
+                  className="absolute left-3 -top-3 cursor-text bg-tertiary-color px-1 text-base lg:peer-focus:text-base md:peer-focus:text-base peer-focus:text-sm peer-placeholder-shown: peer-placeholder-shown:translate-y-6 peer-placeholder-shown:font-medium  peer-focus:-translate-y-0  transition-all duration-200"
                 >
-                  Your Name
+                  What's Your Name?
                 </label>
               </div>
-              <div className='relative'>
+              <div className="relative">
                 <input
-                  type='email'
-                  name='email'
-                  id='email'
-                  className='text-teal p-3 bg-transparent border border-gray-200 rounded-[.5rem] outline-none peer w-full placeholder-transparent focus:border-teal'
-                  placeholder='email'
+                  type="email"
+                  name="email"
+                  id="email"
+                  className=" p-3 bg-transparent border border-gray-200 rounded-[.5rem] outline-none peer w-full placeholder-transparent"
+                  placeholder="email"
                   required
                 />
                 <label
-                  htmlFor='email'
-                  className='absolute left-3 -top-3 cursor-text  bg-sage px-1 text-base lg:peer-focus:text-base md:peer-focus:text-base peer-focus:text-sm peer-placeholder-shown:text-teal peer-placeholder-shown:translate-y-6 peer-placeholder-shown:font-medium  peer-focus:-translate-y-0  transition-all duration-200'
+                  htmlFor="email"
+                  className="absolute left-3 -top-3 cursor-text  bg-tertiary-color px-1 text-base lg:peer-focus:text-base md:peer-focus:text-base peer-focus:text-sm peer-placeholder-shown: peer-placeholder-shown:translate-y-6 peer-placeholder-shown:font-medium  peer-focus:-translate-y-0  transition-all duration-200"
                 >
-                  Email
+                  Your Fancy Email
                 </label>
               </div>
-              <div className='relative'>
+              <div className="relative">
                 <input
-                  type='text'
-                  name='message'
-                  id='message'
-                  className='text-teal p-3 bg-transparent border border-gray-200 rounded-[.5rem] outline-none peer w-full placeholder-transparent focus:border-teal'
-                  placeholder='message'
+                  type="text"
+                  name="message"
+                  id="message"
+                  className=" p-3 bg-transparent border border-gray-200 rounded-[.5rem] outline-none peer w-full placeholder-transparent"
+                  placeholder="message"
                   required
                 />
                 <label
-                  htmlFor='message'
-                  className='absolute left-3 -top-3 cursor-text  bg-sage px-1 text-base lg:peer-focus:text-base md:peer-focus:text-base peer-focus:text-sm peer-placeholder-shown:text-teal peer-placeholder-shown:translate-y-6 peer-placeholder-shown:font-medium  peer-focus:-translate-y-0  transition-all duration-200'
+                  htmlFor="message"
+                  className="absolute left-3 -top-3 cursor-text  bg-tertiary-color px-1 text-base lg:peer-focus:text-base md:peer-focus:text-base peer-focus:text-sm peer-placeholder-shown: peer-placeholder-shown:translate-y-6 peer-placeholder-shown:font-medium  peer-focus:-translate-y-0  transition-all duration-200"
                 >
-                  Message
+                  Tell Me About Your Project
                 </label>
               </div>
-              <button className='btn w-full'>
-                {loading ? 'Sending...' : 'Send Message'}
-              </button>
+              <Button>
+                {loading ? "Sending..." : "Send Message"}
+              </Button>
             </form>
-            <p className='mt-2 text-base-100'>
+            <p className="mt-2 text-base-100">
               *We won&apos;t share your data with anyone else...
             </p>
           </div>
           {axiosError && (
-            <div className='toast toast-center toast-middle'>
-              <div className='alert alert-info'>
+            <div className="toast toast-center toast-middle">
+              <div className="alert alert-info">
                 <span>{axiosError.message}</span>
               </div>
             </div>
           )}
           {posted && (
-            <div className='toast toast-center toast-middle'>
-              <div className='alert alert-success'>
+            <div className="toast toast-center toast-middle">
+              <div className="alert alert-success">
                 <span>Message sent!</span>
               </div>
             </div>
           )}
         </div>
       </div>
+      {/* Copyright */}
+      <div className="text-center">
+        <p>Thanks For Scrolling! Thats All Folks.</p>
+        <p>
+          &copy;All right reserved <span>{new Date().getFullYear()}</span>
+        </p>
+      </div>
     </div>
-  )
+  );
 }
