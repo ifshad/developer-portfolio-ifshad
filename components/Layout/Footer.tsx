@@ -82,7 +82,7 @@ export default function Footer() {
                   htmlFor="name"
                   className="absolute left-3 -top-3 cursor-text bg-tertiary-color px-1 text-base lg:peer-focus:text-base md:peer-focus:text-base peer-focus:text-sm peer-placeholder-shown: peer-placeholder-shown:translate-y-6 peer-placeholder-shown:font-medium  peer-focus:-translate-y-0  transition-all duration-200"
                 >
-                  What's Your Name?
+                  What&apos;s Your Name?
                 </label>
               </div>
               <div className="relative">

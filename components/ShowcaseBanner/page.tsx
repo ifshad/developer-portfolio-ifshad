@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { FaArrowRight, FaGithub } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { GoDash } from "react-icons/go";
 const projects = [
   {
     title: "TechDynasty-Modern tech on your fingertip!",
@@ -33,7 +34,7 @@ export default function ShowcaseBanner() {
       <div className="flex">
         {/* Left Card */}
         <div className="w-1/2 p-5 md:p-12 flex flex-col justify-around">
-          <p className="text-lg mb-5 md:text-xl opacity-80">Contact</p>
+          <p className="text-lg mb-5 md:text-xl opacity-80 flex gap-3 items-center"><GoDash /> Contact</p>
           <h2 className="text-lg md:text-5xl font-bold">
             Any Type of Query and Discussion
           </h2>
@@ -52,7 +53,7 @@ export default function ShowcaseBanner() {
         {/* Right Card */}
         <div className="w-1/2 p-5 md:p-12 flex flex-col justify-around">
           <h2 className="text-lg md:text-5xl font-bold">
-            You can't use up your creativity. The more you use, more you have in your significant mind!
+            You can&apos;t use up your creativity. The more you use, more you have in your significant mind!
           </h2>
           <p className="text-lg my-5 md:text-xl opacity-80">
             Explore my diverse range of projects, demonstrating my expertise in

@@ -9,6 +9,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import { BiLogoFacebookSquare, BiLogoLinkedinSquare } from "react-icons/bi";
 import { FaDiscord, FaGithub } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
+import { GoDash } from "react-icons/go";
 
 export default function SelfBanner() {
   return (
@@ -82,7 +83,7 @@ export default function SelfBanner() {
         </div>
         {/* Description Section */}
         <div>
-          <p className="text-lg mb-5 md:text-xl opacity-80">Introduction</p>
+          <p className="text-lg mb-5 md:text-xl opacity-80 flex gap-3 items-center"><GoDash /> Introduction</p>
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed out once, initially
@@ -103,7 +104,7 @@ export default function SelfBanner() {
           />
           {/* <h2 className="text-lg md:text-5xl font-bold">,based in Dhaka Bangladesh</h2> */}
           <p className="text-lg my-5 md:text-xl opacity-80">
-            I’m a dynamic software engineer specializing in robust web
+            I&apos;m a dynamic software engineer specializing in robust web
             applications. Proficient in front-end, back-end, and DSA, I build
             scalable, user-friendly applications. I thrive in collaborative
             environments, driving innovative projects and delivering
