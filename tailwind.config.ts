@@ -58,9 +58,10 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
         "primary-color": "#EEEEEE",
-        "secondary-color": "#686D76",
-        "tertiary-color": "#373A40",
+        "secondary-color": "#070F2B",
+        "tertiary-color": "#352F44",
         "accent-color": "#FD299C",
+        "card-color": "#3C5B6F"
       },
       borderRadius: {
         lg: "var(--radius)",

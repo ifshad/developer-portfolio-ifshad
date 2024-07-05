@@ -71,7 +71,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-tertiary-color text-primary-color;
+    @apply bg-secondary-color text-primary-color;
   }
 }
 
@@ -80,7 +80,7 @@
     @apply p-3 rounded-lg ;
   }
   .card {
-    @apply p-4 hover:transition-all hover:shadow-2xl rounded-lg md:grid md:grid-cols-12 items-center gap-2 text-sm text-start;
+    @apply p-4 hover:transition-all hover:shadow-xl rounded-lg md:grid md:grid-cols-12 items-center gap-2 text-sm text-start bg-card-color hover:shadow-card-color;
   }
 
   .card-title {

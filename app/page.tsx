@@ -1,24 +1,14 @@
 import SelfBanner from "@/components/SelfBanner/page";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import ShowcaseBanner from "@/components/ShowcaseBanner/page";
-// import ScrollAnimation from "react-animate-on-scroll";
+import PortfolioPage from "@/components/PortfolioPage/page";
 
 
 export default function Home() {
   return (
-    <div className="container">
+    <div>
       <SelfBanner />
       <ShowcaseBanner />
-      
+      <PortfolioPage />
     </div>
   );
 }

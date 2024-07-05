@@ -29,7 +29,7 @@ const projects = [
 ];
 export default function ShowcaseBanner() {
   return (
-    <div className="container">
+    <div className="container md:h-[700px] bg-tertiary-color">
       {/* Descriptions */}
       <div className="flex">
         {/* Left Card */}
@@ -44,9 +44,9 @@ export default function ShowcaseBanner() {
           <div className="">
             <Link
               href="/about"
-              className="inline-flex text-accent-color opacity-80 items-center gap-x-2 border-b-2 border-transparent hover:opacity-100 hover:border-accent-color"
+              className="inline-flex text-accent-color opacity-90 items-center gap-x-2 border-b-2 border-transparent hover:opacity-100 hover:border-accent-color"
             >
-              My Story <FaArrowRight />
+              Email Me <FaArrowRight />
             </Link>
           </div>
         </div>
@@ -84,12 +84,12 @@ export default function ShowcaseBanner() {
         {projects.map((project, i) => (
           <div
             key={i}
-            className="w-80 h-80 bg-tertiary-color/70 hover:shadow-md hover:shadow-accent-color p-8 rounded-sm grid grid-rows-6 hover:bg-accent-color"
+            className="w-80 h-80 bg-card-color border border-card-color shadow shadow-card-color hover:shadow-accent-color hover:border-accent-color p-8 rounded-sm grid grid-rows-6 hover:bg-accent-color"
           >
             <div className="row-span-3"></div>
             <div className="row-span-2">
-              <h3>{project.title}</h3>
-              <p>{project.description}</p>
+              <h3 className="text-lg md:text-xl font-bold">{project.title}</h3>
+              <p className="opacity-80">{project.description}</p>
             </div>
             <div className="row-span-1 space-x-6">
               <Link

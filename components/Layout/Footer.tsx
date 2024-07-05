@@ -1,49 +1,152 @@
 "use client";
-import React from "react";
-import {
-  FaDiscord,
-} from "react-icons/fa6";
+import React, { useState } from "react";
+import { FaArrowRight, FaDiscord } from "react-icons/fa6";
 import Link from "next/link";
-import { BiLogoFacebookSquare, BiLogoLinkedinSquare } from "react-icons/bi";
+import axios from "axios";
+import { Button } from "../ui/button";
 
 export default function Footer() {
+  const [loading, setLoading] = useState(false);
+  const [axiosError, setAxiosError] = useState<any>();
+  const [posted, setPosted] = useState(false);
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const name = form.get("name");
+    const email = form.get("email");
+    const message = form.get("message");
+
+    const messageData = {
+      Name: name,
+      Email: email,
+      Message: message,
+    };
+    setLoading(true);
+
+    axios
+      .post(
+        "https://api.sheetapi.rest/api/v1/sheet/QDgKar5L2rr9ndLuTvYFL",
+        messageData
+      )
+      .then(() => {})
+      .catch((error) => setAxiosError(error))
+      .finally(() => {
+        setLoading(false);
+        setPosted(true);
+      });
+    setTimeout(() => {
+      setPosted(false);
+    }, 3000);
+    e.target.reset();
+  };
   return (
-    <div className="container border-t-2">
-      <div className="flex flex-col justify-center items-center p-10">
+    <div className="container py-6 md:py-14 bg-tertiary-color">
+      <div className="flex justify-between p-10">
         {/* Description */}
         <div className="mb-5">
-          <div className="">
-            <h2 className="mb-3 text-xl md:text-2xl lg:text-3xl font-semibold text-base-300">
-              Lets Connect
+          <div className="p-5 md:p-12 flex flex-col justify-around">
+            <h2 className="text-lg md:text-3xl font-bold">
+              Got a Project? <br /> Lets Talk
             </h2>
-            <p className="mb-6 text-base-100">
-              Please fill out the form on this section to contact with me or
-              call between 9:00 A.M and 8.00 P.M ET, Monday through Friday.
+            <p className="text-lg my-5 md:text-xl opacity-80">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
-            <ul className="flex gap-3 items-center">
-              <li className="text-base-100 hover:text-navy">
-                <Link href="https://www.facebook.com/ifshadhasan.sharan">
-                  <BiLogoFacebookSquare size={30} />
-                </Link>
-              </li>
-              <li className="text-base-100 hover:text-navy">
-                <Link href="https://www.linkedin.com/in/ifshad-hasan-sharan-50a6b1178/">
-                  <BiLogoLinkedinSquare size={30} />
-                </Link>
-              </li>
-              <li className="text-base-100 hover:text-navy">
-                <Link href="/">
-                  <FaDiscord size={25} />
-                </Link>
-              </li>
-            </ul>
+            <div className="">
+              <Link
+                href="/about"
+                className="inline-flex text-accent-color opacity-90 items-center gap-x-2 border-b-2 border-transparent hover:opacity-100 hover:border-accent-color"
+              >
+                Email Me <FaArrowRight />
+              </Link>
+            </div>
           </div>
         </div>
-        <div>
-          <p>
-            &copy;All right reserved <span>{new Date().getFullYear()}</span>
-          </p>
+        {/* Form */}
+        <div className="col-span-3">
+          <div className="">
+            <h2 className="text-lg md:text-3xl font-bold mb-5">
+              Estimate Your Project? <br /> Let Me Know Here
+            </h2>
+            <form onSubmit={handleSubmit} className="flex flex-col gap-y-5">
+              <div className="relative">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  className=" p-3 bg-transparent border border-gray-200 rounded-[.5rem] outline-none peer w-full placeholder-transparent"
+                  placeholder="name"
+                  required
+                />
+                <label
+                  htmlFor="name"
+                  className="absolute left-3 -top-3 cursor-text bg-tertiary-color px-1 text-base lg:peer-focus:text-base md:peer-focus:text-base peer-focus:text-sm peer-placeholder-shown: peer-placeholder-shown:translate-y-6 peer-placeholder-shown:font-medium  peer-focus:-translate-y-0  transition-all duration-200"
+                >
+                  What's Your Name?
+                </label>
+              </div>
+              <div className="relative">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  className=" p-3 bg-transparent border border-gray-200 rounded-[.5rem] outline-none peer w-full placeholder-transparent"
+                  placeholder="email"
+                  required
+                />
+                <label
+                  htmlFor="email"
+                  className="absolute left-3 -top-3 cursor-text  bg-tertiary-color px-1 text-base lg:peer-focus:text-base md:peer-focus:text-base peer-focus:text-sm peer-placeholder-shown: peer-placeholder-shown:translate-y-6 peer-placeholder-shown:font-medium  peer-focus:-translate-y-0  transition-all duration-200"
+                >
+                  Your Fancy Email
+                </label>
+              </div>
+              <div className="relative">
+                <input
+                  type="text"
+                  name="message"
+                  id="message"
+                  className=" p-3 bg-transparent border border-gray-200 rounded-[.5rem] outline-none peer w-full placeholder-transparent"
+                  placeholder="message"
+                  required
+                />
+                <label
+                  htmlFor="message"
+                  className="absolute left-3 -top-3 cursor-text  bg-tertiary-color px-1 text-base lg:peer-focus:text-base md:peer-focus:text-base peer-focus:text-sm peer-placeholder-shown: peer-placeholder-shown:translate-y-6 peer-placeholder-shown:font-medium  peer-focus:-translate-y-0  transition-all duration-200"
+                >
+                  Tell Me About Your Project
+                </label>
+              </div>
+              <Button>
+                {loading ? "Sending..." : "Send Message"}
+              </Button>
+            </form>
+            <p className="mt-2 text-base-100">
+              *We won&apos;t share your data with anyone else...
+            </p>
+          </div>
+          {axiosError && (
+            <div className="toast toast-center toast-middle">
+              <div className="alert alert-info">
+                <span>{axiosError.message}</span>
+              </div>
+            </div>
+          )}
+          {posted && (
+            <div className="toast toast-center toast-middle">
+              <div className="alert alert-success">
+                <span>Message sent!</span>
+              </div>
+            </div>
+          )}
         </div>
+      </div>
+      {/* Copyright */}
+      <div className="text-center">
+        <p>Thanks For Scrolling! Thats All Folks.</p>
+        <p>
+          &copy;All right reserved <span>{new Date().getFullYear()}</span>
+        </p>
       </div>
     </div>
   );
