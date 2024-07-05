@@ -6,17 +6,21 @@ import ExtraCurActPage from "@/components/ExtraCurActPage/page";
 import ProfessionalExpPage from "@/components/ProfessionalExpPage/page";
 import ResearchActPage from "@/components/ResearchActPage/page";
 import VolunteerPage from "@/components/VolunteerPage/page";
+import Header from "@/components/Layout/Header";
 
 export default function AboutPage() {
   return (
-    <div className="container md:p-16">
-      <ProfessionalExpPage />
-      <ExpertisePage />
-      <EducationPage />
-      <ResearchActPage />
-      <ExtraCurActPage />
-      <AchievementPage />
-      <VolunteerPage />
+    <div className="container">
+      <Header />
+      <div className="md:p-16">
+        <ProfessionalExpPage />
+        <ExpertisePage />
+        <EducationPage />
+        <ResearchActPage />
+        <ExtraCurActPage />
+        <AchievementPage />
+        <VolunteerPage />
+      </div>
     </div>
   );
 }

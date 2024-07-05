@@ -50,7 +50,7 @@ export default function Footer() {
               Got a Project? <br /> Lets Talk
             </h2>
             <p className="text-lg my-5 md:text-xl opacity-80">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              I used to help others with my genius solutions.
             </p>
             <div className="">
               <Link

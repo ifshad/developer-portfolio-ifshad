@@ -16,7 +16,7 @@ export default function Header() {
           <Link href="/about">About</Link>
         </Button>
         <Button asChild variant="link" className="text-lg text-primary-color">
-          <Link href="/contact">Contact</Link>
+          <Link href="/projects">Works</Link>
         </Button>
       </div>
       <div>

@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 export default function PortfolioPage() {
   return (
-    <div className="container md:h-[700px] md:mt-16">
+    <div className="container md:h-[700px] md:mt-36">
       {/* Description */}
       <div className="w-1/2 p-5 md:p-12 flex flex-col justify-around">
         <p className="text-lg mb-5 md:text-xl opacity-80">Portfolio</p>
@@ -12,7 +12,7 @@ export default function PortfolioPage() {
           All Creative Works, <br /> Selected Projects
         </h2>
         <p className="text-lg my-5 md:text-xl opacity-80">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Check out the varsatile catalogue of projects.
         </p>
         <div className="">
           <Link

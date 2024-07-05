@@ -65,11 +65,19 @@ export default function SelfBanner() {
       <div className="w-1/2 p-5 md:p-12 flex flex-col justify-around">
         {/* Navigation menu */}
         <div>
-          <Button asChild variant="link" className="text-lg text-primary-color/80 hover:scale-110 transition-all duration-300">
-            <Link href="/about">About</Link>
+          <Button
+            asChild
+            variant="link"
+            className="text-lg text-primary-color opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300"
+          >
+            <Link href="/about">About Me</Link>
           </Button>
-          <Button asChild variant="link" className="text-lg text-primary-color/80 hover:scale-110 transition-all duration-300">
-            <Link href="/contact">Contact</Link>
+          <Button
+            asChild
+            variant="link"
+            className="text-lg text-primary-color opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300"
+          >
+            <Link href="/projects">Works</Link>
           </Button>
         </div>
         {/* Description Section */}
@@ -78,6 +86,8 @@ export default function SelfBanner() {
           <TypeAnimation
             sequence={[
               // Same substring at the start will only be typed out once, initially
+              "I am a Software Engineer",
+              1000,
               "I am a Full Stack Developer",
               1000, // wait 1s before replacing "Mice" with "Hamsters"
               "I am a Designer",
@@ -93,10 +103,11 @@ export default function SelfBanner() {
           />
           {/* <h2 className="text-lg md:text-5xl font-bold">,based in Dhaka Bangladesh</h2> */}
           <p className="text-lg my-5 md:text-xl opacity-80">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-            voluptates dolore dolor eum praesentium iure suscipit quod. Quasi
-            modi, debitis amet non rem beatae maiores impedit, aut, dicta libero
-            reprehenderit!
+            I’m a dynamic software engineer specializing in robust web
+            applications. Proficient in front-end, back-end, and DSA, I build
+            scalable, user-friendly applications. I thrive in collaborative
+            environments, driving innovative projects and delivering
+            high-quality, reliable web solutions.
           </p>
           <div className="">
             <Link

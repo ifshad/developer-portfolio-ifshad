@@ -2,29 +2,28 @@
 import Link from "next/link";
 import React from "react";
 import { FaArrowRight, FaGithub } from "react-icons/fa6";
-import { Button } from "../ui/button";
 import { FaExternalLinkAlt } from "react-icons/fa";
 const projects = [
   {
-    title: "TechDynasty- Modern tech on your fingertip!",
-    imageUrl: "habijabi",
-    description: "habijabi",
-    liveLink: "ditasi",
-    repoLink: "wait",
+    title: "TechDynasty-Modern tech on your fingertip!",
+    imageUrl: "",
+    description: "A full-stack e-commerce platform using Next.js, TypeScript, ShadCN UI, Tailwind CSS, and Axios for a dynamic front-end , and Node.js, Express.js, and MongoDB for a robust back-end ",
+    liveLink: "https://tech-dynasty-client.vercel.app/",
+    repoLink: "https://github.com/ifshad/tech-dynasty-client",
   },
   {
     title: "The Tensor Times!",
-    imageUrl: "habijabi",
-    description: "habijabi",
-    liveLink: "ditasi",
-    repoLink: "wait",
+    imageUrl: "",
+    description: "An AI-powered newsletter service provider landing page using Vite and React, enhancing user experience and performance with modern frontend technologies",
+    liveLink: "https://ai-news-letter.netlify.app/",
+    repoLink: "",
   },
   {
     title: "Personal portfolio!",
-    imageUrl: "habijabi",
-    description: "habijabi",
-    liveLink: "ditasi",
-    repoLink: "wait",
+    imageUrl: "",
+    description: "A sleek personal portfolio with Next.js, TypeScript, and Tailwind CSS, showcasing projects and skills with dynamic responsiveness",
+    liveLink: "https://ifshads-code-journey.vercel.app/",
+    repoLink: "waihttps://github.com/ifshad/developer-portfolio-ifshadt",
   },
 ];
 export default function ShowcaseBanner() {
@@ -39,7 +38,7 @@ export default function ShowcaseBanner() {
             Any Type of Query and Discussion
           </h2>
           <p className="text-lg my-5 md:text-xl opacity-80">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Feel free to discuss or ask any query about my works.
           </p>
           <div className="">
             <Link
@@ -53,14 +52,13 @@ export default function ShowcaseBanner() {
         {/* Right Card */}
         <div className="w-1/2 p-5 md:p-12 flex flex-col justify-around">
           <h2 className="text-lg md:text-5xl font-bold">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            You can't use up your creativity. The more you use, more you have in your significant mind!
           </h2>
           <p className="text-lg my-5 md:text-xl opacity-80">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum
-            dolor, sit amet consectetur adipisicing elit. Sit doloribus
-            consequatur, repudiandae quia sapiente qui. Voluptas natus rerum,
-            debitis corrupti laudantium, repudiandae quos consequuntur, cumque
-            nostrum fuga animi. Incidunt, aliquid.
+            Explore my diverse range of projects, demonstrating my expertise in
+            web development, from dynamic front-end interfaces to robust
+            back-end systems. Each project reflects my commitment to innovation,
+            performance, and user-centric design.
           </p>
           {/* Experience section */}
           <div className="flex w-3/4 justify-between">
@@ -84,9 +82,9 @@ export default function ShowcaseBanner() {
         {projects.map((project, i) => (
           <div
             key={i}
-            className="w-80 h-80 bg-card-color border border-card-color shadow shadow-card-color hover:shadow-accent-color hover:border-accent-color p-8 rounded-sm grid grid-rows-6 hover:bg-accent-color"
+            className="w-80 min-h-80 bg-card-color border border-card-color shadow shadow-card-color hover:shadow-accent-color hover:border-accent-color p-8 rounded-sm grid grid-rows-3 hover:bg-accent-color"
           >
-            <div className="row-span-3"></div>
+            {/* <div className="row-span-3"></div> */}
             <div className="row-span-2">
               <h3 className="text-lg md:text-xl font-bold">{project.title}</h3>
               <p className="opacity-80">{project.description}</p>
