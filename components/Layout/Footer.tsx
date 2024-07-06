@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import { FaArrowRight, FaDiscord } from "react-icons/fa6";
 import Link from "next/link";
 import axios from "axios";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
+import logo from "@/public/Images/Circles_Life_RGB_Color_Logo logo.svg";
+import Image from "next/image";
 
 export default function Footer() {
   const [loading, setLoading] = useState(false);
@@ -117,9 +119,7 @@ export default function Footer() {
                   Tell Me About Your Project
                 </label>
               </div>
-              <Button className="btn transition-all duration-500">
-                {loading ? "Sending..." : "Send Message"}
-              </Button>
+              <Button>{loading ? "Sending..." : "Send Message"}</Button>
             </form>
             <p className="mt-2 text-base-100">
               *We won&apos;t share your data with anyone else...
@@ -142,7 +142,8 @@ export default function Footer() {
         </div>
       </div>
       {/* Copyright */}
-      <div className="text-center">
+      <div className="flex flex-col items-center justify-center">
+        <Image src={logo} alt="Logo or monogram" height={100} />
         <p>Thanks For Scrolling! Thats All Folks.</p>
         <p>
           &copy;All right reserved <span>{new Date().getFullYear()}</span>

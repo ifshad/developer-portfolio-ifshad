@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    /* --background: #373A40; */
+    --background: 227 73% 10%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -83,7 +83,7 @@
     @apply bg-primary-color text-secondary-color;
   }
   .card {
-    @apply p-4 hover:transition-all hover:shadow-xl rounded-lg md:grid md:grid-cols-12 items-center gap-2 text-sm text-start bg-card-color hover:shadow-card-color;
+    @apply p-4 transition-all hover:shadow-md rounded-lg md:grid md:grid-cols-12 items-center gap-2 text-sm text-start bg-transparent border border-card-color hover:shadow-card-color;
   }
 
   .card-title {

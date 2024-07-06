@@ -16,19 +16,19 @@ const services = [
     title: "Frontend Development",
     icon: <FaLaptop />,
     description:
-      "A full-stack e-commerce platform using Next.js, TypeScript, ShadCN UI, Tailwind CSS, and Axios for a dynamic front-end , and Node.js, Express.js, and MongoDB for a robust back-end ",
+      "Crafting engaging user interfaces with modern frameworks like React and Next.js ",
   },
   {
     title: "Backend Development",
     icon: <FaServer />,
     description:
-      "An AI-powered newsletter service provider landing page using Vite and React, enhancing user experience and performance with modern frontend technologies",
+      "Building robust server-side solutions using technologies like Node.js, Express, and MongoDB, PostgreSQL",
   },
   {
     title: "Responsive Design",
     icon: <MdMobileFriendly />,
     description:
-      "A sleek personal portfolio with Next.js, TypeScript, and Tailwind CSS, showcasing services and skills with dynamic responsiveness",
+      "Creating fluid layouts that seamlessly adapt to any screen size or device",
   },
 ];
 export default function ShowcaseBanner() {
@@ -45,12 +45,12 @@ export default function ShowcaseBanner() {
           query about my services.
         </p>
         <div className="">
-          <Link
-            href="/about"
+          <a
+            href="mailto:ifshadmte.51@gmail.com"
             className="inline-flex text-accent-color opacity-90 items-center gap-x-2 border-b-2 border-transparent hover:opacity-100 hover:border-accent-color transition-all duration-500"
           >
             Email Me <FaArrowRight />
-          </Link>
+          </a>
         </div>
       </div>
       {/* Services */}

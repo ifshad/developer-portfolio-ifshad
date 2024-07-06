@@ -35,7 +35,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/components/ui/tooltip"
 
 const languages = [
   {
@@ -166,7 +166,9 @@ export default function ExpertisePage() {
               <TooltipProvider key={i}>
                 <Tooltip>
                   <TooltipTrigger>{language.icon}</TooltipTrigger>
-                  <TooltipContent className="font-bold">{language.langName}</TooltipContent>
+                  <TooltipContent className="font-bold">
+                    {language.langName}
+                  </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
             ))}
@@ -174,7 +176,7 @@ export default function ExpertisePage() {
         </div>
         {/* Dev Framework */}
         <div className="group card flex flex-col h-full">
-          <h2 className="text-lg font-semibold text-navy group-hover:text-white">
+          <h2 className="text-lg font-semibold text-center text-navy group-hover:text-white">
             Development Frameworks
           </h2>
           <div className="grid grid-cols-3 gap-5 text-3xl">
@@ -182,7 +184,9 @@ export default function ExpertisePage() {
               <TooltipProvider key={i}>
                 <Tooltip>
                   <TooltipTrigger>{framework.icon}</TooltipTrigger>
-                  <TooltipContent className="font-bold">{framework.langName}</TooltipContent>
+                  <TooltipContent className="font-bold">
+                    {framework.langName}
+                  </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
             ))}
@@ -198,7 +202,9 @@ export default function ExpertisePage() {
               <TooltipProvider key={i}>
                 <Tooltip>
                   <TooltipTrigger>{framework.icon}</TooltipTrigger>
-                  <TooltipContent className="font-bold">{framework.langName}</TooltipContent>
+                  <TooltipContent className="font-bold">
+                    {framework.langName}
+                  </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
             ))}
@@ -214,7 +220,9 @@ export default function ExpertisePage() {
               <TooltipProvider key={i}>
                 <Tooltip>
                   <TooltipTrigger>{utility.icon}</TooltipTrigger>
-                  <TooltipContent className="font-bold">{utility.langName}</TooltipContent>
+                  <TooltipContent className="font-bold">
+                    {utility.langName}
+                  </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
             ))}
@@ -230,7 +238,9 @@ export default function ExpertisePage() {
               <TooltipProvider key={i}>
                 <Tooltip>
                   <TooltipTrigger>{db.icon}</TooltipTrigger>
-                  <TooltipContent className="font-bold">{db.langName}</TooltipContent>
+                  <TooltipContent className="font-bold">
+                    {db.langName}
+                  </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
             ))}
@@ -246,7 +256,9 @@ export default function ExpertisePage() {
               <TooltipProvider key={i}>
                 <Tooltip>
                   <TooltipTrigger>{cs.icon}</TooltipTrigger>
-                  <TooltipContent className="font-bold">{cs.langName}</TooltipContent>
+                  <TooltipContent className="font-bold">
+                    {cs.langName}
+                  </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
             ))}
@@ -262,7 +274,9 @@ export default function ExpertisePage() {
               <TooltipProvider key={i}>
                 <Tooltip>
                   <TooltipTrigger>{graphic.icon}</TooltipTrigger>
-                  <TooltipContent className="font-bold">{graphic.langName}</TooltipContent>
+                  <TooltipContent className="font-bold">
+                    {graphic.langName}
+                  </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
             ))}
@@ -278,7 +292,9 @@ export default function ExpertisePage() {
               <TooltipProvider key={i}>
                 <Tooltip>
                   <TooltipTrigger>{other.icon}</TooltipTrigger>
-                  <TooltipContent className="font-bold">{other.langName}</TooltipContent>
+                  <TooltipContent className="font-bold">
+                    {other.langName}
+                  </TooltipContent>
                 </Tooltip>
               </TooltipProvider>
             ))}
