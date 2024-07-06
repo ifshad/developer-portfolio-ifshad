@@ -41,7 +41,7 @@ export default function Footer() {
     e.target.reset();
   };
   return (
-    <div className="container py-6 md:py-14 bg-tertiary-color">
+    <div className="container py-6 md:py-16 bg-tertiary-color">
       <div className="flex justify-between p-10">
         {/* Description */}
         <div className="mb-5">
@@ -55,7 +55,7 @@ export default function Footer() {
             <div className="">
               <Link
                 href="/about"
-                className="inline-flex text-accent-color opacity-90 items-center gap-x-2 border-b-2 border-transparent hover:opacity-100 hover:border-accent-color"
+                className="inline-flex text-accent-color opacity-90 items-center gap-x-2 border-b-2 border-transparent hover:opacity-100 hover:border-accent-color transition-all duration-500"
               >
                 Email Me <FaArrowRight />
               </Link>
@@ -117,7 +117,7 @@ export default function Footer() {
                   Tell Me About Your Project
                 </label>
               </div>
-              <Button>
+              <Button className="btn transition-all duration-500">
                 {loading ? "Sending..." : "Send Message"}
               </Button>
             </form>

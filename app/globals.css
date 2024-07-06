@@ -77,7 +77,10 @@
 
 @layer components {
   .btn {
-    @apply p-3 rounded-lg ;
+    @apply p-3 rounded-sm bg-secondary-color transition-all duration-500;
+  }
+  .btn:hover {
+    @apply bg-primary-color text-secondary-color;
   }
   .card {
     @apply p-4 hover:transition-all hover:shadow-xl rounded-lg md:grid md:grid-cols-12 items-center gap-2 text-sm text-start bg-card-color hover:shadow-card-color;
