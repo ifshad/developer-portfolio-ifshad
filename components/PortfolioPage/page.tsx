@@ -1,9 +1,9 @@
-import Image from "next/image";
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { FaArrowRight, FaGithub } from "react-icons/fa6";
-import { GoDash } from "react-icons/go";
+import { motion } from "framer-motion"
 
 const projects = [
   {
@@ -54,7 +54,7 @@ export default function PortfolioPage() {
         {projects.map((project, i) => (
           <div
             key={i}
-            className="w-96 bg-card-color border border-card-color shadow shadow-card-color hover:shadow-accent-color hover:border-accent-color p-8 rounded-sm grid grid-rows-4 hover:bg-accent-color transition-all duration-500"
+            className="w-96 bg-card-color border border-card-color shadow shadow-card-color hover:shadow-accent-color hover:border-accent-color p-8 rounded-sm grid grid-rows-4 hover:bg-accent-color hover:skew-y-1 transition-all duration-500"
           >
             <div className="row-span-1">
               <h3 className="text-lg md:text-xl font-bold">{project.title}</h3>
