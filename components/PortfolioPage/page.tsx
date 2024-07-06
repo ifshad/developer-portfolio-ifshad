@@ -9,7 +9,7 @@ const projects = [
     title: "TechDynasty-Modern tech on your fingertip!",
     imageUrl: "",
     description:
-      "A full-stack e-commerce platform using Next.js, TypeScript, ShadCN UI, Tailwind CSS, and Axios for a dynamic front-end , and Node.js, Express.js, and MongoDB for a robust back-end ",
+      "A full-stack e-commerce platform using Next.js, TypeScript, ShadCN UI, Tailwind CSS, and Axios for a dynamic front-end , and Node.js, Express.js, and MongoDB for a robust back-end. ",
     liveLink: "https://tech-dynasty-client.vercel.app/",
     repoLink: "https://github.com/ifshad/tech-dynasty-client",
   },
@@ -17,7 +17,7 @@ const projects = [
     title: "The Tensor Times!",
     imageUrl: "",
     description:
-      "An AI-powered newsletter service provider landing page using Vite and React, enhancing user experience and performance with modern frontend technologies",
+      "An AI-powered newsletter service provider landing page using Vite and React, enhancing user experience and performance with modern frontend technologies.",
     liveLink: "https://ai-news-letter.netlify.app/",
     repoLink: "",
   },
@@ -25,7 +25,7 @@ const projects = [
     title: "Personal portfolio!",
     imageUrl: "",
     description:
-      "A sleek personal portfolio with Next.js, TypeScript, and Tailwind CSS, showcasing projects and skills with dynamic responsiveness",
+      "A sleek personal portfolio with Next.js, TypeScript, and Tailwind CSS, showcasing projects and skills with dynamic responsiveness.",
     liveLink: "https://ifshads-code-journey.vercel.app/",
     repoLink: "waihttps://github.com/ifshad/developer-portfolio-ifshadt",
   },

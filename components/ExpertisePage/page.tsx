@@ -35,7 +35,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@/components/ui/tooltip"
 
 const languages = [
   {
@@ -176,7 +176,7 @@ export default function ExpertisePage() {
         </div>
         {/* Dev Framework */}
         <div className="group card flex flex-col h-full">
-          <h2 className="text-lg font-semibold text-navy group-hover:text-white">
+          <h2 className="text-lg font-semibold text-center text-navy group-hover:text-white">
             Development Frameworks
           </h2>
           <div className="grid grid-cols-3 gap-5 text-3xl">

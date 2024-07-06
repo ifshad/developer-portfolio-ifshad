@@ -14,16 +14,19 @@ export default function AboutSection() {
       <div className="text-center">
         <h2 className="text-lg md:text-5xl font-bold">About Me</h2>
         <p className="text-lg my-5 md:text-xl opacity-80">
-          Learn briefly about myself.
+          Discover the journey of a passionate web developer bringing ideas to
+          life..
         </p>
       </div>
-      <ProfessionalExpPage />
-      <ExpertisePage />
-      <EducationPage />
-      <ResearchActPage />
-      <ExtraCurActPage />
-      <AchievementPage />
-      <VolunteerPage />
+      <div className="w-11/12 mx-auto">
+        <ProfessionalExpPage />
+        <ExpertisePage />
+        <EducationPage />
+        <ResearchActPage />
+        <ExtraCurActPage />
+        <AchievementPage />
+        <VolunteerPage />
+      </div>
     </div>
   );
 }
