@@ -19,7 +19,7 @@ export default function SelfBanner() {
         <div>Logo</div>
         {/* Name */}
         <div>
-          <h1 className="text-4xl md:text-7xl font-extrabold">
+          <h1 className="text-4xl md:text-8xl font-medium">
             Ifshad <br /> Hasan Sharan
           </h1>
           <div className="w-16 border-b-4 border-b-accent-color mt-5"></div>
@@ -54,13 +54,13 @@ export default function SelfBanner() {
             </li>
           </ul>
         </div>
-        <Image
+        {/* <Image
           src={ifshad}
           alt="Ifshad Hasan Sharan"
           // width={360}
           height={600}
           className="absolute -z-10 translate-x-60 bottom-0"
-        />
+        /> */}
       </div>
       {/* Description */}
       <div className="w-1/2 p-5 md:p-12 flex flex-col justify-around">

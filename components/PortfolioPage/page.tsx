@@ -5,7 +5,7 @@ import { GoDash } from "react-icons/go";
 
 export default function PortfolioPage() {
   return (
-    <div className="container md:h-[700px] md:mt-36">
+    <div className="container md:h-[700px] md:mt-16">
       {/* Description */}
       <div className="w-1/2 p-5 md:p-12 flex flex-col justify-around">
         <p className="text-lg mb-5 md:text-xl opacity-80 flex gap-3 items-center"><GoDash/> Portfolio</p>

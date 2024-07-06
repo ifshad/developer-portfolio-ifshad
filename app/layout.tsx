@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lato, Ubuntu } from "next/font/google";
+import { DM_Sans, Lato, Ubuntu } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Layout/Header";
 import Footer from "@/components/Layout/Footer";
@@ -13,6 +13,10 @@ const lato = Lato({
   weight: ["100", "300", "400", "700", "900"],
   subsets: ["latin"],
 });
+const dmSans = DM_Sans({
+  weight: ['900', '800', '700', '600', '500', '400', '300'],
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
   title: "Ifshad-Dev",
@@ -26,12 +30,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={lato.className}>
-        <div className="">
-          <NextTopLoader />
-          {/* <Header /> */}
-          {children}
-          <Footer />
+      <body className={dmSans.className}>
+        <div className="relative h-full w-full bg-secondary-color">
+          <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+          <div className="">
+            <NextTopLoader />
+            {/* <Header /> */}
+            {children}
+            <Footer />
+          </div>
         </div>
       </body>
     </html>
