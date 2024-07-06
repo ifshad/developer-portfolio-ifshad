@@ -33,7 +33,9 @@ const services = [
 ];
 export default function ShowcaseBanner() {
   return (
-    <div id="services" className="container md:py-16">
+    <div id="services" className="container md:py-16 relative">
+      <div className="absolute w-[450px] h-[450px] rounded-full bg-indigo-500/30 bottom-16 left-96  blur-3xl -z-30"></div>
+      <div className="absolute w-[450px] h-[450px] rounded-full bg-indigo-500/30 bottom-16 right-96  blur-3xl -z-30"></div>
       {/* Descriptions */}
       <div className="text-center">
         {/* <p className="text-lg mb-5 md:text-xl opacity-80 flex gap-3 items-center">

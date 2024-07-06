@@ -13,7 +13,9 @@ import logo from "@/public/Images/Circles_Life_RGB_Color_Logo logo.svg";
 
 export default function SelfBanner() {
   return (
-    <div className="container flex md:h-[700px] w-full">
+    <div className="container flex md:h-[700px] w-full relative">
+      {/* Background */}
+      <div className="absolute md:w-[700px] h-16 md:top-40 bg-indigo-500/30 rotate-45 md:left-40 blur-3xl"></div>
       {/* Image intro */}
       <div className="w-1/2 p-5 md:p-12 flex flex-col justify-around">
         <div>
