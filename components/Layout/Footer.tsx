@@ -82,7 +82,7 @@ export default function Footer() {
                 />
                 <label
                   htmlFor="name"
-                  className="absolute left-3 -top-3 cursor-text bg-tertiary-color px-1 text-base lg:peer-focus:text-base md:peer-focus:text-base peer-focus:text-sm peer-placeholder-shown: peer-placeholder-shown:translate-y-6 peer-placeholder-shown:font-medium  peer-focus:-translate-y-0  transition-all duration-200"
+                  className="absolute left-3 -top-3 cursor-text bg-tertiary-color opacity-75 peer-focus:opacity-100 px-1 text-base lg:peer-focus:text-base md:peer-focus:text-base peer-focus:text-sm peer-placeholder-shown: peer-placeholder-shown:translate-y-6 peer-placeholder-shown:font-medium  peer-focus:-translate-y-0  transition-all duration-200"
                 >
                   What&apos;s Your Name?
                 </label>
@@ -98,7 +98,7 @@ export default function Footer() {
                 />
                 <label
                   htmlFor="email"
-                  className="absolute left-3 -top-3 cursor-text  bg-tertiary-color px-1 text-base lg:peer-focus:text-base md:peer-focus:text-base peer-focus:text-sm peer-placeholder-shown: peer-placeholder-shown:translate-y-6 peer-placeholder-shown:font-medium  peer-focus:-translate-y-0  transition-all duration-200"
+                  className="absolute left-3 -top-3 cursor-text  bg-tertiary-color opacity-75 peer-focus:opacity-100 px-1 text-base lg:peer-focus:text-base md:peer-focus:text-base peer-focus:text-sm peer-placeholder-shown: peer-placeholder-shown:translate-y-6 peer-placeholder-shown:font-medium  peer-focus:-translate-y-0  transition-all duration-200"
                 >
                   Your Fancy Email
                 </label>
@@ -114,7 +114,7 @@ export default function Footer() {
                 />
                 <label
                   htmlFor="message"
-                  className="absolute left-3 -top-3 cursor-text  bg-tertiary-color px-1 text-base lg:peer-focus:text-base md:peer-focus:text-base peer-focus:text-sm peer-placeholder-shown: peer-placeholder-shown:translate-y-6 peer-placeholder-shown:font-medium  peer-focus:-translate-y-0  transition-all duration-200"
+                  className="absolute left-3 -top-3 cursor-text  bg-tertiary-color opacity-75 peer-focus:opacity-100 px-1 text-base lg:peer-focus:text-base md:peer-focus:text-base peer-focus:text-sm peer-placeholder-shown: peer-placeholder-shown:translate-y-6 peer-placeholder-shown:font-medium  peer-focus:-translate-y-0  transition-all duration-200"
                 >
                   Tell Me About Your Project
                 </label>

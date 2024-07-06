@@ -11,6 +11,7 @@ import { SiLeetcode } from "react-icons/si";
 import { GoDash } from "react-icons/go";
 import logo from "@/public/Images/Circles_Life_RGB_Color_Logo logo.svg";
 
+
 export default function SelfBanner() {
   return (
     <div className="container flex md:h-[700px] w-full relative">

@@ -9,7 +9,9 @@ import VolunteerPage from "@/components/VolunteerPage/page";
 
 export default function AboutSection() {
   return (
-    <div id="about" className="container md:p-16">
+    <div id="about" className="container md:p-16 relative">
+      <div className="absolute w-[450px] h-[450px] rounded-full bg-indigo-500/20 top-96 left-96  blur-3xl -z-30"></div>
+      <div className="absolute w-[450px] h-[450px] rounded-full bg-indigo-500/20 bottom-96 right-96  blur-3xl -z-30"></div>
       {/* Descriptions */}
       <div className="text-center">
         <h2 className="text-lg md:text-5xl font-bold">About Me</h2>
