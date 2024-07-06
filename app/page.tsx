@@ -1,6 +1,7 @@
 import SelfBanner from "@/components/SelfBanner/page";
 import ShowcaseBanner from "@/components/ShowcaseBanner/page";
 import PortfolioPage from "@/components/PortfolioPage/page";
+import AboutSection from "@/components/AboutSection/page";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <SelfBanner />
       <PortfolioPage />
       <ShowcaseBanner />
+      <AboutSection />
     </div>
   );
 }

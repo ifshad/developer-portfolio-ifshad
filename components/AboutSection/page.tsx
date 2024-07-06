@@ -6,21 +6,24 @@ import ExtraCurActPage from "@/components/ExtraCurActPage/page";
 import ProfessionalExpPage from "@/components/ProfessionalExpPage/page";
 import ResearchActPage from "@/components/ResearchActPage/page";
 import VolunteerPage from "@/components/VolunteerPage/page";
-import Header from "@/components/Layout/Header";
 
-export default function AboutPage() {
+export default function AboutSection() {
   return (
-    <div className="container">
-      <Header />
-      <div className="md:p-16">
-        <ProfessionalExpPage />
-        <ExpertisePage />
-        <EducationPage />
-        <ResearchActPage />
-        <ExtraCurActPage />
-        <AchievementPage />
-        <VolunteerPage />
+    <div id="about" className="container md:p-16">
+      {/* Descriptions */}
+      <div className="text-center">
+        <h2 className="text-lg md:text-5xl font-bold">About Me</h2>
+        <p className="text-lg my-5 md:text-xl opacity-80">
+          Learn briefly about myself.
+        </p>
       </div>
+      <ProfessionalExpPage />
+      <ExpertisePage />
+      <EducationPage />
+      <ResearchActPage />
+      <ExtraCurActPage />
+      <AchievementPage />
+      <VolunteerPage />
     </div>
   );
 }
