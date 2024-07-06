@@ -27,27 +27,27 @@ export default function SelfBanner() {
         {/* Social Links */}
         <div>
           <ul className="flex gap-3 items-center">
-            <li className="text-base-100 opacity-70 hover:opacity-100">
+            <li className="text-base-100 opacity-70 hover:opacity-100 transition-all duration-500">
               <Link href="https://www.facebook.com/ifshadhasan.sharan">
                 <BiLogoFacebookSquare size={30} />
               </Link>
             </li>
-            <li className="text-base-100 opacity-70 hover:opacity-100">
+            <li className="text-base-100 opacity-70 hover:opacity-100 transition-all duration-500">
               <Link href="https://www.linkedin.com/in/ifshad-hasan-sharan-50a6b1178/">
                 <BiLogoLinkedinSquare size={30} />
               </Link>
             </li>
-            <li className="text-base-100 opacity-70 hover:opacity-100">
+            <li className="text-base-100 opacity-70 hover:opacity-100 transition-all duration-500">
               <Link href="https://discordapp.com/users/ifshad_51">
                 <FaDiscord size={25} />
               </Link>
             </li>
-            <li className="text-base-100 opacity-70 hover:opacity-100">
+            <li className="text-base-100 opacity-70 hover:opacity-100 transition-all duration-500">
               <Link href="https://github.com/ifshad">
                 <FaGithub size={25} />
               </Link>
             </li>
-            <li className="text-base-100 opacity-70 hover:opacity-100">
+            <li className="text-base-100 opacity-70 hover:opacity-100 transition-all duration-500">
               <Link href="https://leetcode.com/u/i6J0GjFUV9/">
                 <SiLeetcode size={25} />
               </Link>
@@ -71,14 +71,21 @@ export default function SelfBanner() {
             variant="link"
             className="text-lg text-primary-color opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300"
           >
-            <Link href="/about">About Me</Link>
+            <Link href="#about">About</Link>
           </Button>
           <Button
             asChild
             variant="link"
             className="text-lg text-primary-color opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300"
           >
-            <Link href="/projects">Works</Link>
+            <Link href="#projects">Projects</Link>
+          </Button>
+          <Button
+            asChild
+            variant="link"
+            className="text-lg text-primary-color opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300"
+          >
+            <Link href="#services">Services</Link>
           </Button>
         </div>
         {/* Description Section */}
@@ -113,7 +120,7 @@ export default function SelfBanner() {
           <div className="">
             <Link
               href="/about"
-              className="inline-flex text-accent-color opacity-90 items-center gap-x-2 border-b-2 border-transparent hover:opacity-100 hover:border-accent-color"
+              className="inline-flex text-accent-color opacity-90 items-center gap-x-2 border-b-2 border-transparent hover:opacity-100 hover:border-accent-color transition-all duration-500"
             >
               My Story <FaArrowRight />
             </Link>
