@@ -9,7 +9,6 @@ import { BiLogoFacebookSquare, BiLogoLinkedinSquare } from "react-icons/bi";
 import { FaDiscord, FaGithub } from "react-icons/fa6";
 import { SiLeetcode } from "react-icons/si";
 import { GoDash } from "react-icons/go";
-import logo from "@/public/Images/Circles_Life_RGB_Color_Logo logo.svg";
 
 
 export default function SelfBanner() {
@@ -19,11 +18,7 @@ export default function SelfBanner() {
       <div className="absolute md:w-[700px] h-16 md:top-40 bg-indigo-500/30 rotate-45 md:left-40 blur-3xl"></div>
       {/* Image intro */}
       <div className="w-1/2 p-5 md:p-12 flex flex-col justify-around">
-        <div>
-          <Link href="/">
-            <Image src={logo} alt="Logo or monogram" height={100} />
-          </Link>
-        </div>
+        
         {/* Name */}
         <div>
           <p className="text-lg mb-5 md:text-3xl opacity-80 flex gap-3 items-center">
@@ -74,30 +69,7 @@ export default function SelfBanner() {
       </div>
       {/* Description */}
       <div className="w-1/2 p-5 md:p-12 flex flex-col justify-around">
-        {/* Navigation menu */}
-        <div>
-          <Button
-            asChild
-            variant="link"
-            className="text-lg text-primary-color opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300"
-          >
-            <Link href="#about">About</Link>
-          </Button>
-          <Button
-            asChild
-            variant="link"
-            className="text-lg text-primary-color opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300"
-          >
-            <Link href="#projects">Projects</Link>
-          </Button>
-          <Button
-            asChild
-            variant="link"
-            className="text-lg text-primary-color opacity-80 hover:opacity-100 hover:scale-110 transition-all duration-300"
-          >
-            <Link href="#services">Services</Link>
-          </Button>
-        </div>
+        
         {/* Description Section */}
         <div>
           <p className="text-lg mb-5 md:text-xl opacity-80 flex gap-3 items-center">
