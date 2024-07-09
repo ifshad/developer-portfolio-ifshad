@@ -23,6 +23,7 @@ export default function ExtraCurActPage() {
           // translateX: scaleTransform,
         }}
         ref={scrollRef}
+        className="space-y-3"
       >
         <div className="card md:ml-9">
           <div className="card-title flex flex-col items-start">

@@ -22,7 +22,8 @@ export default function AchievementPage() {
           scale: scaleTransform,
           // translateX: scaleTransform,
         }}
-        ref={scrollRef}>
+        ref={scrollRef}
+        className="space-y-3">
         <div className="card md:ml-9 grid-cols-12">
           <figure className="col-span-1 text-3xl">
             <BiSolidBadge />

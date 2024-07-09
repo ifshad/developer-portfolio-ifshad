@@ -2,12 +2,6 @@ import SelfBanner from "@/components/SelfBanner/page";
 import ShowcaseBanner from "@/components/ShowcaseBanner/page";
 import PortfolioPage from "@/components/PortfolioPage/page";
 import AboutSection from "@/components/AboutSection/page";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
 
 export default function Home() {
   return (

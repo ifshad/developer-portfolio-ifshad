@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React, { useRef } from "react";
 import ruet from "@/public/Images/ruet-monogram-2505-x-3000.png";
@@ -25,7 +25,9 @@ export default function EducationPage() {
           scale: scaleTransform,
           // translateX: scaleTransform,
         }}
-        ref={scrollRef}>
+        ref={scrollRef}
+        className="space-y-3"
+      >
         <div className="card md:ml-9">
           <Image src={ruet} alt="RUET logo" width={60} className="card-img" />
           <div className="card-title flex flex-col items-start">

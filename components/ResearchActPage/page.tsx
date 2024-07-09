@@ -30,6 +30,7 @@ export default function ResearchActPage() {
           // translateX: scaleTransform,
         }}
         ref={scrollRef}
+        className="space-y-3"
       >
         {/* Thesis */}
         <div className="card  md:ml-9">

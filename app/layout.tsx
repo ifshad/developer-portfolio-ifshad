@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import { DM_Sans, Lato, Ubuntu } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Layout/Footer";
-import logo from "@/public/Images/Circles_Life_RGB_Color_Logo logo.svg";
 import Header from "@/components/Layout/Header";
 
 
