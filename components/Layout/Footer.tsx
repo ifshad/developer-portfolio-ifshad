@@ -6,11 +6,11 @@ import axios from "axios";
 import { Button } from "@/components/ui/button";
 import logo from "@/public/Images/Circles_Life_RGB_Color_Logo logo.svg";
 import Image from "next/image";
+import Swal from 'sweetalert2';
 
 export default function Footer() {
   const [loading, setLoading] = useState(false);
   const [axiosError, setAxiosError] = useState<any>();
-  const [posted, setPosted] = useState(false);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -35,11 +35,23 @@ export default function Footer() {
       .catch((error) => setAxiosError(error))
       .finally(() => {
         setLoading(false);
-        setPosted(true);
+        // setPosted(true);
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          },
+        });
+        Toast.fire({
+          icon: "success",
+          title: "Message sent successfully!",
+        });
       });
-    setTimeout(() => {
-      setPosted(false);
-    }, 3000);
     e.target.reset();
   };
   return (
@@ -129,13 +141,6 @@ export default function Footer() {
             <div className="toast toast-center toast-middle">
               <div className="alert alert-info">
                 <span>{axiosError.message}</span>
-              </div>
-            </div>
-          )}
-          {posted && (
-            <div className="toast toast-center toast-middle">
-              <div className="alert alert-success">
-                <span>Message sent!</span>
               </div>
             </div>
           )}
