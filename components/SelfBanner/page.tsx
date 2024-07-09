@@ -1,8 +1,6 @@
 "use client";
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-import Image from "next/image";
-import { Button } from "../ui/button";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 import { BiLogoFacebookSquare, BiLogoLinkedinSquare } from "react-icons/bi";
@@ -18,13 +16,12 @@ export default function SelfBanner() {
       <div className="absolute md:w-[700px] h-16 md:top-40 bg-indigo-500/30 rotate-45 md:left-40 blur-3xl"></div>
       {/* Image intro */}
       <div className="w-1/2 p-5 md:p-12 flex flex-col justify-around">
-        
         {/* Name */}
         <div>
           <p className="text-lg mb-5 md:text-3xl opacity-80 flex gap-3 items-center">
             Hi, I&apos;m
           </p>
-          <h1 className="text-4xl md:text-8xl font-medium">
+          <h1 className="text-4xl md:text-8xl font-medium bg-gradient-to-br from-[#15D8FA] from-33% via-[#00FFFF] via-33% to-[#FE0049] to-34% bg-clip-text text-transparent z-40">
             Ifshad <br /> Hasan Sharan
           </h1>
           <div className="w-16 border-b-4 border-b-accent-color mt-5"></div>
@@ -59,17 +56,9 @@ export default function SelfBanner() {
             </li>
           </ul>
         </div>
-        {/* <Image
-          src={ifshad}
-          alt="Ifshad Hasan Sharan"
-          // width={360}
-          height={600}
-          className="absolute z-10 translate-x-60 bottom-0"
-        /> */}
       </div>
       {/* Description */}
       <div className="w-1/2 p-5 md:p-12 flex flex-col justify-around">
-        
         {/* Description Section */}
         <div>
           <p className="text-lg mb-5 md:text-xl opacity-80 flex gap-3 items-center">
