@@ -32,7 +32,7 @@ export default function Header() {
   };
 
   return (
-    <div className="flex justify-between md:h-20 items-center md:pr-20 shadow-lg sticky top-7 z-50 backdrop-blur-md md:w-3/5 rounded-full mx-auto">
+    <div className="hidden lg:flex justify-between md:h-20 items-center md:pr-20 shadow-lg sticky top-7 z-50 backdrop-blur-md md:w-3/5 rounded-full mx-auto">
       {/* Logo */}
       <Link href="/#" onClick={(e) => handleClick(e, "/#")}>
         <Image src={logo} alt="Logo or monogram" height={80} />

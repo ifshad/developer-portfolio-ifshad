@@ -11,20 +11,20 @@ import { GoDash } from "react-icons/go";
 
 export default function SelfBanner() {
   return (
-    <div className="container flex md:h-[700px] w-full relative">
+    <div className="container flex flex-col lg:flex-row md:h-[700px] w-full relative">
       {/* Background */}
       <div className="absolute md:w-[700px] h-16 md:top-40 bg-indigo-500/30 rotate-45 md:left-40 blur-3xl"></div>
       {/* Image intro */}
-      <div className="w-1/2 p-5 md:p-12 flex flex-col justify-around">
+      <div className="lg:w-1/2 text-center lg:text-start p-5 lg:p-12 flex flex-col justify-around">
         {/* Name */}
         <div>
-          <p className="text-lg mb-5 md:text-3xl opacity-80 flex gap-3 items-center">
+          <p className="text-lg mb-5 md:text-3xl opacity-80 flex gap-3 items-center text-center md:text-start">
             Hi, I&apos;m
           </p>
           <h1 className="text-4xl md:text-8xl font-medium bg-gradient-to-br from-[#15D8FA] from-33% via-[#00FFFF] via-33% to-[#FE0049] to-34% bg-clip-text text-transparent z-40">
             Ifshad <br /> Hasan Sharan
           </h1>
-          <div className="w-16 border-b-4 border-b-accent-color mt-5"></div>
+          <div className="w-16 border-b-4 border-b-accent-color md:mt-5 hidden md:visible"></div>
         </div>
         {/* Social Links */}
         <div>
@@ -58,7 +58,7 @@ export default function SelfBanner() {
         </div>
       </div>
       {/* Description */}
-      <div className="w-1/2 p-5 md:p-12 flex flex-col justify-around">
+      <div className="lg:w-1/2 text-center lg:text-start p-5 lg:p-12 flex flex-col justify-around">
         {/* Description Section */}
         <div>
           <p className="text-lg mb-5 md:text-xl opacity-80 flex gap-3 items-center">
