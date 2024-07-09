@@ -4,7 +4,6 @@ import "./globals.css";
 import Footer from "@/components/Layout/Footer";
 import Header from "@/components/Layout/Header";
 
-
 const dmSans = DM_Sans({
   weight: ["900", "800", "700", "600", "500", "400", "300"],
   subsets: ["latin"],
@@ -23,7 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="/Images/Circles_Life_RGB_Color_Logo logo.svg" type="image/x-icon" />
+        <link
+          rel="shortcut icon"
+          href="/Images/Circles_Life_RGB_Color_Logo logo.svg"
+          type="image/x-icon"
+        />
       </head>
       <body className={dmSans.className}>
         <div className="relative h-full w-full">

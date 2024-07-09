@@ -49,7 +49,7 @@ export default function PortfolioPage() {
         <h2 className="text-lg md:text-5xl font-bold">
           All Creative Works, Selected Projects
         </h2>
-        <p className="text-lg my-5 md:text-xl opacity-80">
+        <p className="text-lg md:my-5 md:text-xl opacity-80">
           Check out the varsatile catalogue of my projects.
         </p>
       </div>
@@ -61,7 +61,7 @@ export default function PortfolioPage() {
           // translateX: scaleTransform,
         }}
         ref={scrollRef}
-        className="grid grid-cols-3 gap-4 p-5 w-11/12 mx-auto"
+        className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:p-5 w-11/12 mx-auto"
       >
         {projects.map((project, i) => (
           <div

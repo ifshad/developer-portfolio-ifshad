@@ -56,7 +56,7 @@ export default function Footer() {
   };
   return (
     <div className="container py-6 md:py-16 bg-tertiary-color">
-      <div className="flex justify-between p-10">
+      <div className="flex flex-col lg:flex-row justify-between p-10">
         {/* Description */}
         <div className="mb-5">
           <div className="p-5 md:p-12 flex flex-col justify-around">
