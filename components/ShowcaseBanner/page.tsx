@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useRef } from "react";
 import {
   FaArrowRight,
   FaDesktop,
@@ -11,6 +11,9 @@ import {
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { GoDash } from "react-icons/go";
 import { MdMobileFriendly } from "react-icons/md";
+import { useFramer } from "@/hooks/useFramer";
+import { motion } from "framer-motion";
+
 const services = [
   {
     title: "Frontend Development",
@@ -32,6 +35,8 @@ const services = [
   },
 ];
 export default function ShowcaseBanner() {
+  const scrollRef = useRef(null);
+  const { scaleTransform, opacityTransform } = useFramer(scrollRef);
   return (
     <div id="services" className="container md:py-16 relative">
       <div className="absolute w-[450px] h-[450px] rounded-full bg-indigo-500/30 bottom-16 left-96  blur-3xl -z-30"></div>
@@ -56,7 +61,15 @@ export default function ShowcaseBanner() {
         </div>
       </div>
       {/* Services */}
-      <div className="grid grid-cols-3 gap-4 p-5 w-3/4 mx-auto">
+      <motion.div
+        style={{
+          opacity: opacityTransform,
+          scale: scaleTransform,
+          // translateX: scaleTransform,
+        }}
+        ref={scrollRef}
+        className="grid grid-cols-3 gap-4 p-5 w-3/4 mx-auto"
+      >
         {services.map((service, i) => (
           <div
             key={i}
@@ -72,7 +85,7 @@ export default function ShowcaseBanner() {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }
