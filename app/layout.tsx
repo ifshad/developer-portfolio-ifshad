@@ -3,6 +3,7 @@ import { DM_Sans, Lato, Ubuntu } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Layout/Footer";
 import logo from "@/public/Images/Circles_Life_RGB_Color_Logo logo.svg";
+import Header from "@/components/Layout/Header";
 
 
 const dmSans = DM_Sans({
@@ -29,6 +30,7 @@ export default function RootLayout({
         <div className="relative h-full w-full">
           <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:60px_60px] -z-40"></div>
           <div className="">
+            <Header />
             {children}
             <Footer />
           </div>
