@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import React, { useRef } from "react";
 import { FaExternalLinkAlt } from "react-icons/fa";
-import { FaArrowRight, FaGithub } from "react-icons/fa6";
-import { motion } from "framer-motion"
+import { FaGithub } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { useFramer } from "@/hooks/useFramer";
 
 const projects = [
   {
@@ -33,6 +34,9 @@ const projects = [
 ];
 
 export default function PortfolioPage() {
+  const scrollRef = useRef(null);
+  const { scaleTransform, opacityTransform } = useFramer(scrollRef);
+
   return (
     <div id="projects" className="container md:py-16 relative">
       <div className="absolute w-[450px] h-[450px] rounded-full bg-indigo-500/30 top-0 left-0  blur-3xl -z-30"></div>
@@ -50,7 +54,15 @@ export default function PortfolioPage() {
         </p>
       </div>
       {/* Project Cards */}
-      <div className="grid grid-cols-3 gap-4 p-5 w-11/12 mx-auto">
+      <motion.div
+        style={{
+          opacity: opacityTransform,
+          scale: scaleTransform,
+          // translateX: scaleTransform,
+        }}
+        ref={scrollRef}
+        className="grid grid-cols-3 gap-4 p-5 w-11/12 mx-auto"
+      >
         {projects.map((project, i) => (
           <div
             key={i}
@@ -85,7 +97,7 @@ export default function PortfolioPage() {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

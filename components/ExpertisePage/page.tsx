@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, { useRef } from "react";
 import { BiVector } from "react-icons/bi";
 import { BsLightning } from "react-icons/bs";
 import { DiFirebase, DiPython } from "react-icons/di";
@@ -35,7 +36,9 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
+} from "@/components/ui/tooltip";
+import { useFramer } from "@/hooks/useFramer";
+import { motion } from "framer-motion";
 
 const languages = [
   {
@@ -147,6 +150,8 @@ const others = [
 ];
 
 export default function ExpertisePage() {
+  const scrollRef = useRef(null);
+  const { scaleTransform, opacityTransform } = useFramer(scrollRef);
   return (
     <div className="container m-5">
       <h1 className="flex items-center text-xl md:text-2xl lg:text-3xl font-bold text-teal gap-2">
@@ -155,7 +160,15 @@ export default function ExpertisePage() {
         </span>
         Expertise
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:ml-9 gap-4">
+      <motion.div
+        style={{
+          opacity: opacityTransform,
+          scale: scaleTransform,
+          // translateX: scaleTransform,
+        }}
+        ref={scrollRef}
+        className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 md:ml-9 gap-4"
+      >
         {/* Programming language */}
         <div className="group card flex flex-col h-full">
           <h2 className="text-lg font-semibold text-navy group-hover:text-white">
@@ -300,7 +313,7 @@ export default function ExpertisePage() {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
