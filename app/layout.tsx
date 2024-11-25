@@ -9,9 +9,38 @@ const dmSans = DM_Sans({
   subsets: ["latin"],
 });
 
+// export const metadata: Metadata = {
+//   title: "Ifshad's Portfolio",
+//   description: "Developer portfolio of Ifshad Hasan Sharan",
+// };
+
 export const metadata: Metadata = {
-  title: "Ifshad's Portfolio",
-  description: "Developer portfolio of Ifshad Hasan Sharan",
+  title: "Ifshad's Portfolio | Full Stack Developer",
+  description:
+    "Explore the portfolio of Ifshad Hasan Sharan, a passionate full-stack developer specializing in modern web applications and scalable solutions.",
+  keywords: [
+    "Ifshad Hasan Sharan",
+    "Developer Portfolio",
+    "Full Stack Developer",
+    "Web Development",
+    "Frontend Developer",
+    "Backend Developer",
+  ],
+  openGraph: {
+    title: "Ifshad's Portfolio | Full Stack Developer",
+    description:
+      "Explore the portfolio of Ifshad Hasan Sharan, a passionate full-stack developer specializing in modern web applications and scalable solutions.",
+    url: "https://ifshads-code-journey.vercel.app/",
+    images: [
+      {
+        url: "/Images/Circles_Life_RGB_Color_Logo logo.svg",
+        width: 800,
+        height: 600,
+        alt: "Portfolio logo",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
