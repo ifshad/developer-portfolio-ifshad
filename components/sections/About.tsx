@@ -1,5 +1,5 @@
 import Image from "next/image";
-import portrait from "@/public/Images/Ifshad_01.png";
+import portrait from "@/public/Images/Sharan_DP_Formal_02-removebg-preview.png";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
@@ -15,9 +15,7 @@ export function About() {
           <Image
             src={portrait}
             alt="Portrait of Ifshad Hasan Sharan"
-            width={200}
-            height={200}
-            className="h-44 w-44 rounded-sm border border-line object-cover grayscale-[15%] sm:h-48 sm:w-48"
+            className="w-48 grayscale-[10%] sm:w-56"
             priority={false}
           />
         </Reveal>
