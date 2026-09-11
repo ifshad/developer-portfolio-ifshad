@@ -39,7 +39,10 @@ export function ProjectCard({ project }: { project: Project }) {
               <h3 className="font-display text-xl font-semibold text-bone sm:text-2xl">
                 {project.title}
               </h3>
-              <p className="mt-1 font-mono text-[12px] text-sage">{project.role}</p>
+              <p className="mt-1 font-mono text-[12px] text-sage">
+                {project.role}
+                {project.period && ` · ${project.period}`}
+              </p>
             </div>
             <ArrowUpRight
               className="mt-1 shrink-0 text-sage transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-bone"

@@ -1,8 +1,9 @@
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import type { Project } from "@/data/projects";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
+import { Button } from "@/components/ui/button";
 import { ArchitectureDiagram } from "./ArchitectureDiagram";
 import { TechStack } from "./TechStack";
 
@@ -23,10 +24,26 @@ export function CaseStudy({ project }: { project: Project }) {
           <h1 className="font-display text-4xl font-semibold leading-tight text-bone sm:text-5xl">
             {project.title}
           </h1>
-          <p className="mt-2 font-mono text-sm text-sage">{project.role}</p>
+          <p className="mt-2 font-mono text-sm text-sage">
+            {project.role}
+            {project.period && ` · ${project.period}`}
+          </p>
           <p className="mt-5 max-w-prose text-[16px] leading-relaxed text-sage">
             {project.summary}
           </p>
+
+          {project.links && project.links.length > 0 && (
+            <div className="mt-6 flex flex-wrap gap-3">
+              {project.links.map((link) => (
+                <Button key={link.url} asChild variant="outline" size="sm">
+                  <a href={link.url} target="_blank" rel="noreferrer">
+                    {link.label}
+                    <ArrowUpRight size={14} />
+                  </a>
+                </Button>
+              ))}
+            </div>
+          )}
         </Reveal>
 
         <div className="mt-16 grid gap-14 lg:grid-cols-[1fr_auto] lg:gap-20">
