@@ -24,7 +24,14 @@
       "Bash(ls -la /c/tmp/pwtest/shots/ 2>&1)",
       "Read(//c/tmp/pwtest/shots//**)",
       "Read(//c/tmp/pwtest/shots/**)",
-      "Bash(git mv *)"
+      "Bash(git mv *)",
+      "Bash(lsof -ti:3000 -sTCP:LISTEN)",
+      "Bash(xargs -r kill)",
+      "Bash(lsof -ti:3001 -sTCP:LISTEN)",
+      "Bash(lsof -i:3000 -sTCP:LISTEN)",
+      "Bash(lsof -i:3001 -sTCP:LISTEN)",
+      "PowerShell($ports = 3000,3001; foreach \\($p in $ports\\) { $conns = Get-NetTCPConnection -LocalPort $p -State Listen -ErrorAction SilentlyContinue; if \\($conns\\) { foreach \\($c in $conns\\) { Write-Output \"Port $p -> PID $\\($c.OwningProcess\\)\"; Stop-Process -Id $c.OwningProcess -Force -ErrorAction SilentlyContinue } } else { Write-Output \"Port $p -> nothing listening\" } })",
+      "PowerShell(Start-Sleep -Seconds 1; foreach \\($p in 3000,3001\\) { $c = Get-NetTCPConnection -LocalPort $p -State Listen -ErrorAction SilentlyContinue; if \\($c\\) { Write-Output \"Port $p still listening\" } else { Write-Output \"Port $p is free\" } })"
     ]
   }
 }
