@@ -1,15 +1,23 @@
-import SelfBanner from "@/components/SelfBanner/page";
-import ShowcaseBanner from "@/components/ShowcaseBanner/page";
-import PortfolioPage from "@/components/PortfolioPage/page";
-import AboutSection from "@/components/AboutSection/page";
+import { Hero } from "@/components/sections/Hero";
+import { EngineeringSnapshot } from "@/components/sections/EngineeringSnapshot";
+import { SelectedWork } from "@/components/sections/SelectedWork";
+import { Experience } from "@/components/sections/Experience";
+import { EngineeringApproach } from "@/components/sections/EngineeringApproach";
+import { About } from "@/components/sections/About";
+import { Education } from "@/components/sections/Education";
+import { Contact } from "@/components/sections/Contact";
 
 export default function Home() {
   return (
-    <div>
-      <SelfBanner />
-      <PortfolioPage />
-      <ShowcaseBanner />
-      <AboutSection />
-    </div>
+    <>
+      <Hero />
+      <EngineeringSnapshot />
+      <SelectedWork />
+      <Experience />
+      <EngineeringApproach />
+      <About />
+      <Education />
+      <Contact />
+    </>
   );
 }

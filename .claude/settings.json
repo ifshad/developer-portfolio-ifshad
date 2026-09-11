@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(chromium-cli --help)",
+      "Bash(npx --yes playwright --version)",
+      "Bash(node -e \"require.resolve\\('playwright'\\)\")",
+      "Bash(mkdir -p /tmp/pwtest)",
+      "Read(//tmp/**)",
+      "Bash(npm init *)",
+      "Bash(npx playwright *)",
+      "Bash(npx tsc *)",
+      "Bash(echo \"EXIT:$?\")",
+      "Read(//tmp/pwtest/shots/**)",
+      "Read(//d/tmp/pwtest/shots/**)",
+      "Bash(cygpath -w /tmp/pwtest/shots)",
+      "Bash(wslpath -w /tmp/pwtest/shots)",
+      "Read(//c/Users/USER/AppData/Local/Temp/pwtest/shots/**)",
+      "Read(//tmp/pwtest/**)",
+      "Bash(cygpath -w /tmp)",
+      "Bash(node shot.js)",
+      "Bash(echo \"EXIT CODE: $?\")",
+      "Bash(ls -la /c/tmp/pwtest/shots/ 2>&1)",
+      "Read(//c/tmp/pwtest/shots//**)",
+      "Read(//c/tmp/pwtest/shots/**)",
+      "Bash(git mv *)"
+    ]
+  }
+}

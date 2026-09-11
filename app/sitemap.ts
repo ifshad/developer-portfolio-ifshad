@@ -1,30 +1,20 @@
-import type { MetadataRoute } from 'next'
- 
+import type { MetadataRoute } from "next";
+import { site } from "@/data/site";
+import { projects } from "@/data/projects";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://ifshads-code-journey.vercel.app/',
+      url: site.siteUrl,
       lastModified: new Date(),
-      changeFrequency: 'yearly',
+      changeFrequency: "monthly",
       priority: 1,
     },
-    {
-      url: 'https://ifshads-code-journey.vercel.app/#about',
+    ...projects.map((project) => ({
+      url: `${site.siteUrl}/work/${project.slug}`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://ifshads-code-journey.vercel.app/#projects',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.5,
-    },
-    {
-      url: 'https://ifshads-code-journey.vercel.app/#services',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.5,
-    },
-  ]
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+  ];
 }
