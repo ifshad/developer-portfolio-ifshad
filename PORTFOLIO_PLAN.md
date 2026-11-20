@@ -581,7 +581,7 @@ biography.
 
 Mention:
 
--   B.Sc. in Mechatronics Engineering from RUET
+-   Bachelor of Science in Mechatronics Engineering from RUET
 -   Transition into software engineering
 -   Current professional engineering work
 -   Interest in backend/system architecture
@@ -598,7 +598,7 @@ Do not spend excessive space on school history.
 
 Primary education:
 
-**B.Sc. in Mechatronics Engineering**\
+**Bachelor of Science in Mechatronics Engineering**\
 Rajshahi University of Engineering & Technology (RUET)\
 2019--2024
 
