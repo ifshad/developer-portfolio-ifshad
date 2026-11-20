@@ -22,7 +22,7 @@ export function About() {
 
         <Reveal className="max-w-prose">
           <p className="text-[15px] leading-relaxed text-sage">
-            I started with a B.Sc. in Mechatronics Engineering at RUET, working
+            I started with a Bachelor of Science in Mechatronics Engineering at RUET, working
             at the intersection of hardware, control systems, and software —
             a background that shaped how I think about systems under real
             constraints.
