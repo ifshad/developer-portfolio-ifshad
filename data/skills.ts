@@ -1,7 +1,7 @@
 export const skillGroups = [
   {
     label: "Backend",
-    items: ["Node.js", "TypeScript", "NestJS", "Express", "Django", "ASP.NET Core"],
+    items: ["Node.js", "TypeScript", "NestJS", "Express", "C#", "ASP.NET Core"],
   },
   {
     label: "Data",

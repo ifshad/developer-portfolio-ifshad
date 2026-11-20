@@ -19,7 +19,7 @@ export const experience: Experience[] = [
   {
     company: "GearON Bangladesh Ltd.",
     role: "Software Engineer, L2",
-    period: "Apr 2026 — Present",
+    period: "Apr 2026 - Present",
     location: "Dhaka, Bangladesh",
     projects: [
       {
@@ -47,11 +47,11 @@ export const experience: Experience[] = [
     company: "Divergent Technologies Ltd.",
     companyUrl: "https://www.divergenttechbd.com/",
     role: "Software Engineer",
-    period: "May 2025 — Apr 2026",
+    period: "May 2025 - Apr 2026",
     location: "Dhaka, Bangladesh",
     projects: [
       {
-        name: "Purno Health — Telemedicine & Health-Tech Platform",
+        name: "Purno Health - Telemedicine & Health-Tech Platform",
         url: "https://purnohealth.com/",
         points: [
           "Developed and maintained a multi-channel telemedicine ecosystem (web, app, and IVR) serving high-volume traffic.",
@@ -64,7 +64,7 @@ export const experience: Experience[] = [
         tech: ["WebRTC", "STUN/TURN", "MSSQL", "NestJS", "Express.js", "PHP CodeIgniter"],
       },
       {
-        name: "Stayverz — Property Booking Marketplace",
+        name: "Stayverz - Property Booking Marketplace",
         url: "https://stayverz.com/",
         points: [
           "Optimized the Django backend to improve API response times and handle concurrent booking requests.",
@@ -89,7 +89,7 @@ export const experience: Experience[] = [
     company: "Okobiz",
     companyUrl: "https://www.okobiz.com/",
     role: "Software Engineer",
-    period: "Jan 2025 — Apr 2025",
+    period: "July 2024 - Apr 2025",
     location: "Dhaka, Bangladesh",
     projects: [
       {
@@ -107,19 +107,19 @@ export const experience: Experience[] = [
       },
     ],
   },
-  {
-    company: "Humufy",
-    role: "Software Engineering Intern",
-    period: "Mar 2024 — May 2024",
-    location: "Dhaka, Bangladesh",
-    projects: [
-      {
-        points: [
-          "Built and maintained backend API features",
-          "Worked with the team on production-facing fixes and improvements",
-        ],
-        tech: ["Node.js", "TypeScript"],
-      },
-    ],
-  },
+  // {
+  //   company: "Humufy",
+  //   role: "Software Engineering Intern",
+  //   period: "Mar 2024 - May 2024",
+  //   location: "Dhaka, Bangladesh",
+  //   projects: [
+  //     {
+  //       points: [
+  //         "Built and maintained backend API features",
+  //         "Worked with the team on production-facing fixes and improvements",
+  //       ],
+  //       tech: ["Node.js", "TypeScript"],
+  //     },
+  //   ],
+  // },
 ];

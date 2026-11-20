@@ -28,15 +28,15 @@ const description =
 export const metadata: Metadata = {
   metadataBase: new URL(site.siteUrl),
   title: {
-    default: `${site.name} — Software Engineer`,
-    template: `%s — ${site.name}`,
+    default: `${site.name} - Software Engineer`,
+    template: `%s - ${site.name}`,
   },
   description,
   authors: [{ name: site.name, url: site.siteUrl }],
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
-    title: `${site.name} — Software Engineer`,
+    title: `${site.name} - Software Engineer`,
     description,
     url: site.siteUrl,
     siteName: site.name,
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — Software Engineer`,
+    title: `${site.name} - Software Engineer`,
     description,
   },
 };
