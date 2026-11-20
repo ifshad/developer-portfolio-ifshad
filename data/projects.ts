@@ -67,7 +67,7 @@ export const projects: Project[] = [
       "Gave operations staff realtime visibility into pending orders instead of manual refreshing",
     ],
     links: [
-      { label: "Storefront", url: "https://test.zarganz.com/" },
+      { label: "Storefront", url: "https://zarganz.com/" },
       { label: "Admin / ERP", url: "https://test-erp.zarganz.com/" },
     ],
     featured: true,
