@@ -22,8 +22,8 @@ export const projects: Project[] = [
   {
     slug: "zarganz",
     title: "Zarganz",
-    role: "Full Business Automation Platform — E-Commerce & POS",
-    period: "July 2024 — Present",
+    role: "Full Business Automation Platform - E-Commerce & POS",
+    period: "July 2024 - Present",
     summary:
       "A production-grade platform unifying e-commerce, physical retail, POS, inventory, and logistics behind one shared backend. Developed and maintained by our team to ensure seamless integration across all channels.",
     technologies: [
@@ -43,7 +43,7 @@ export const projects: Project[] = [
       "FFmpeg",
     ],
     problem:
-      "Businesses running both an online store and physical retail typically end up maintaining two separate systems — one for e-commerce, one for POS — with duplicated product, pricing, and inventory logic that drifts out of sync. Zarganz needed a single platform where a headless storefront, an in-house POS, and an operations panel could all share the same product, pricing, inventory, discount, customer, and order architecture.",
+      "Businesses running both an online store and physical retail typically end up maintaining two separate systems - one for e-commerce, one for POS - with duplicated product, pricing, and inventory logic that drifts out of sync. Zarganz needed a single platform where a headless storefront, an in-house POS, and an operations panel could all share the same product, pricing, inventory, discount, customer, and order architecture.",
     architecture: [
       "Storefront (Next.js) / POS & Ops Panel",
       "NestJS API",
@@ -76,7 +76,7 @@ export const projects: Project[] = [
     slug: "rendermix-studio",
     title: "RenderMix Studio",
     role: "Motion Videography Studio & LMS",
-    period: "December 2025 — Present",
+    period: "December 2025 - Present",
     summary:
       "A combined marketing site, LMS, student portal, and admin dashboard for a motion-videography studio, built on Next.js with a dedicated REST API. Developed and maintained by our team to ensure smooth operation across all features.",
     technologies: [
@@ -92,14 +92,14 @@ export const projects: Project[] = [
       "PM2",
     ],
     problem:
-      "A motion-videography studio needed one platform to cover its public presence, course delivery, and internal operations — course discovery and enrollment, assignments and tutorials, payments, portfolio and service content, reviews, and admin management — rather than stitching together separate tools.",
+      "A motion-videography studio needed one platform to cover its public presence, course delivery, and internal operations - course discovery and enrollment, assignments and tutorials, payments, portfolio and service content, reviews, and admin management - rather than stitching together separate tools.",
     architecture: [
       "Next.js Client (Public / Student / Admin)",
       "REST API",
       ["Courses & Enrollment", "Assignments & Payments", "Portfolio & Media"],
     ],
     challenges: [
-      "One platform serving three different audiences — public visitors, enrolled students, and admins — behind shared route guards",
+      "One platform serving three different audiences - public visitors, enrolled students, and admins - behind shared route guards",
       "Chunked, resumable video upload architecture for large course and portfolio media",
       "Centralizing REST and multipart request handling instead of repeating fetch logic per feature",
       "Cookie-based bearer-token auth with centralized session-expiration handling across the app",
@@ -119,7 +119,7 @@ export const projects: Project[] = [
     slug: "personal-finance-app",
     title: "Transaction-First Financial Management System",
     role: "Personal Finance App",
-    period: "Aug 2026 — Sep 2026",
+    period: "Aug 2026 - Sep 2026",
     summary:
       "A mobile-first, multi-user personal finance platform that replaces spreadsheet-based tracking with a transaction-first model for accounts, budgets, and reporting.",
     technologies: [
@@ -131,7 +131,7 @@ export const projects: Project[] = [
       "JWT",
     ],
     problem:
-      "Spreadsheet-based personal finance tracking breaks down with multiple accounts and users — it can't enforce data isolation, doesn't handle transfers between accounts without double-counting, and has no real safeguard against rounding errors in money math. The app needed a proper transaction-first system covering accounts, income, expenses, transfers, budgets, and reporting.",
+      "Spreadsheet-based personal finance tracking breaks down with multiple accounts and users - it can't enforce data isolation, doesn't handle transfers between accounts without double-counting, and has no real safeguard against rounding errors in money math. The app needed a proper transaction-first system covering accounts, income, expenses, transfers, budgets, and reporting.",
     architecture: [
       "Next.js Client",
       "ASP.NET Web API",
@@ -140,14 +140,14 @@ export const projects: Project[] = [
       "C# Data Access Layer",
     ],
     challenges: [
-      "Exact monetary calculations — avoiding floating-point error using MSSQL DECIMAL and a BigInt-based Money value object",
+      "Exact monetary calculations - avoiding floating-point error using MSSQL DECIMAL and a BigInt-based Money value object",
       "Modeling transactions so income, expenses, and account-to-account transfers are distinguished without double-counting",
       "Secure per-user data isolation with JWT authentication over httpOnly cookies",
       "Preserving historical transaction integrity when an account or category is deactivated rather than deleted",
       "Enforcing financial invariants with database constraints in addition to application-level validation",
     ],
     solution:
-      "The application follows a strict layered architecture that separates HTTP handling, business logic, data access, authentication, and presentation. Money is never represented as a floating-point number — it's stored as MSSQL DECIMAL and handled through a BigInt-based Money value object, so calculations stay exact. Transfers are modeled as a distinct transaction type linked to both accounts involved, rather than as a plain expense and income pair, which avoids double-counting. Referenced accounts and categories are deactivated rather than deleted, so historical transactions stay intact. Dashboard and report aggregation happen server-side rather than in the client.",
+      "The application follows a strict layered architecture that separates HTTP handling, business logic, data access, authentication, and presentation. Money is never represented as a floating-point number - it's stored as MSSQL DECIMAL and handled through a BigInt-based Money value object, so calculations stay exact. Transfers are modeled as a distinct transaction type linked to both accounts involved, rather than as a plain expense and income pair, which avoids double-counting. Referenced accounts and categories are deactivated rather than deleted, so historical transactions stay intact. Dashboard and report aggregation happen server-side rather than in the client.",
     outcome: [
       "Replaced spreadsheet tracking with a system that enforces correctness at the database and application layer",
       "Eliminated floating-point rounding risk in money calculations",
@@ -165,7 +165,7 @@ export const projects: Project[] = [
     slug: "techdynasty",
     title: "TechDynasty",
     role: "Full-Stack E-Commerce Platform",
-    period: "Jun 2024 — Aug 2024",
+    period: "Jun 2024 - Aug 2024",
     summary:
       "A full-stack e-commerce platform for tech products, with seller-managed product listings and Firebase-authenticated accounts.",
     technologies: [

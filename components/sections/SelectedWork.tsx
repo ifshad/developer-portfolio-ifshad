@@ -32,7 +32,7 @@ export function SelectedWork() {
             >
               <span className="text-[15px]">
                 {project.title}{" "}
-                <span className="text-sage">— {project.role}</span>
+                <span className="text-sage">- {project.role}</span>
               </span>
               <ArrowUpRight
                 size={16}
