@@ -89,7 +89,7 @@ export const experience: Experience[] = [
     company: "Okobiz",
     companyUrl: "https://www.okobiz.com/",
     role: "Software Engineer",
-    period: "Jan 2025 — Apr 2025",
+    period: "July 2024 — Apr 2025",
     location: "Dhaka, Bangladesh",
     projects: [
       {
@@ -107,19 +107,19 @@ export const experience: Experience[] = [
       },
     ],
   },
-  {
-    company: "Humufy",
-    role: "Software Engineering Intern",
-    period: "Mar 2024 — May 2024",
-    location: "Dhaka, Bangladesh",
-    projects: [
-      {
-        points: [
-          "Built and maintained backend API features",
-          "Worked with the team on production-facing fixes and improvements",
-        ],
-        tech: ["Node.js", "TypeScript"],
-      },
-    ],
-  },
+  // {
+  //   company: "Humufy",
+  //   role: "Software Engineering Intern",
+  //   period: "Mar 2024 — May 2024",
+  //   location: "Dhaka, Bangladesh",
+  //   projects: [
+  //     {
+  //       points: [
+  //         "Built and maintained backend API features",
+  //         "Worked with the team on production-facing fixes and improvements",
+  //       ],
+  //       tech: ["Node.js", "TypeScript"],
+  //     },
+  //   ],
+  // },
 ];
